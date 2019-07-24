@@ -101,17 +101,40 @@
 
 
 
-  <meta name="description" content="GZY的个人博客">
-<meta name="keywords" content="Python, Machine Learning, Deep Learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Record">
-<meta property="og:url" content="http://yoursite.com/tags/概率论与数理统计/index.html">
+  <meta name="description" content="分布函数&amp;nbsp; 连续随机变量&amp;nbsp; 概率密度函数的性质&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 均匀分布定义&amp;nbsp; 均匀分布性质&amp;nbsp; 指数分布定义&amp;nbsp; 指数分布性质&amp;nbsp;&amp;nbsp;&amp;nbsp; 指数分布用途&amp;nbsp; 正态分布定义&amp;nbsp;&amp;nbsp; 用途&amp;nbsp; 标准正态分布&amp;nbsp; 标准正态分布表&amp;nbsp; 标准正态分布性质&amp;n">
+<meta name="keywords" content="概率论与数理统计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="连续型随机变量">
+<meta property="og:url" content="http://yoursite.com/概率论与数理统计/连续型随机变量/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="GZY的个人博客">
+<meta property="og:description" content="分布函数&amp;nbsp; 连续随机变量&amp;nbsp; 概率密度函数的性质&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 均匀分布定义&amp;nbsp; 均匀分布性质&amp;nbsp; 指数分布定义&amp;nbsp; 指数分布性质&amp;nbsp;&amp;nbsp;&amp;nbsp; 指数分布用途&amp;nbsp; 正态分布定义&amp;nbsp;&amp;nbsp; 用途&amp;nbsp; 标准正态分布&amp;nbsp; 标准正态分布表&amp;nbsp; 标准正态分布性质&amp;n">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/2.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/3.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/4.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/5.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/6.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/7.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/8.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/9.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/10.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/11.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/12.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/13.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/14.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/15.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/16.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/17.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/18.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/19.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/20.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/21.png">
+<meta property="og:updated_time" content="2019-07-24T08:36:23.148Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Record">
-<meta name="twitter:description" content="GZY的个人博客">
+<meta name="twitter:title" content="连续型随机变量">
+<meta name="twitter:description" content="分布函数&amp;nbsp; 连续随机变量&amp;nbsp; 概率密度函数的性质&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 均匀分布定义&amp;nbsp; 均匀分布性质&amp;nbsp; 指数分布定义&amp;nbsp; 指数分布性质&amp;nbsp;&amp;nbsp;&amp;nbsp; 指数分布用途&amp;nbsp; 正态分布定义&amp;nbsp;&amp;nbsp; 用途&amp;nbsp; 标准正态分布&amp;nbsp; 标准正态分布表&amp;nbsp; 标准正态分布性质&amp;n">
+<meta name="twitter:image" content="http://yoursite.com/images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png">
 
 
 
@@ -119,7 +142,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/概率论与数理统计/">
+  <link rel="canonical" href="http://yoursite.com/概率论与数理统计/连续型随机变量/">
 
 
 
@@ -129,7 +152,7 @@
   };
 </script>
 
-  <title>Tag: 概率论与数理统计 | Record</title>
+  <title>连续型随机变量 | Record</title>
   
 
 
@@ -176,7 +199,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <!--<div class="headband"></div>-->
     <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,7 +257,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -336,132 +359,275 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>概率论与数理统计<small>Tag</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/概率论与数理统计/连续型随机变量/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="江火似流萤">
+      <meta itemprop="description" content="GZY的个人博客">
+      <meta itemprop="image" content="/images/bloglogo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Record">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/概率论与数理统计/连续型随机变量/" itemprop="url">
-            
-              <span itemprop="name">连续型随机变量</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">连续型随机变量
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-24T15:53:22+08:00" content="2019-07-24">
-          07-24
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-24 15:53:22 / Modified: 16:36:23" itemprop="dateCreated datePublished" datetime="2019-07-24T15:53:22+08:00">2019-07-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/概率论与数理统计/" itemprop="url" rel="index"><span itemprop="name">概率论与数理统计</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/概率论与数理统计/离散型随机变量/" itemprop="url">
-            
-              <span itemprop="name">离散型随机变量</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-23T14:57:13+08:00" content="2019-07-23">
-          07-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/概率论与数理统计/概率论基础/" itemprop="url">
-            
-              <span itemprop="name">概率论基础</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-23T13:48:33+08:00" content="2019-07-23">
-          07-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h2 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h2><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png" alt></p>
+<h2 id="连续随机变量"><a href="#连续随机变量" class="headerlink" title="连续随机变量"></a>连续随机变量</h2><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/2.png" alt></p>
+<h3 id="概率密度函数的性质"><a href="#概率密度函数的性质" class="headerlink" title="概率密度函数的性质"></a>概率密度函数的性质</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/3.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/4.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/5.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/6.png" alt></p>
+<h2 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/7.png" alt></p>
+<h3 id="均匀分布性质"><a href="#均匀分布性质" class="headerlink" title="均匀分布性质"></a>均匀分布性质</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/8.png" alt></p>
+<h2 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/9.png" alt></p>
+<h3 id="指数分布性质"><a href="#指数分布性质" class="headerlink" title="指数分布性质"></a>指数分布性质</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/10.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/11.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/12.png" alt></p>
+<h3 id="指数分布用途"><a href="#指数分布用途" class="headerlink" title="指数分布用途"></a>指数分布用途</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/13.png" alt></p>
+<h2 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/14.png" alt><br>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/15.png" alt></p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/16.png" alt></p>
+<h3 id="标准正态分布"><a href="#标准正态分布" class="headerlink" title="标准正态分布"></a>标准正态分布</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/17.png" alt></p>
+<h4 id="标准正态分布表"><a href="#标准正态分布表" class="headerlink" title="标准正态分布表"></a>标准正态分布表</h4><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/18.png" alt></p>
+<h4 id="标准正态分布性质"><a href="#标准正态分布性质" class="headerlink" title="标准正态分布性质"></a>标准正态分布性质</h4><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/19.png" alt></p>
+<h3 id="正态分布性质"><a href="#正态分布性质" class="headerlink" title="正态分布性质"></a>正态分布性质</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/20.png" alt></p>
+<h3 id="3σ准则"><a href="#3σ准则" class="headerlink" title="3σ准则"></a>3σ准则</h3><p>&nbsp;<img src="../../images/%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/21.png" alt></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    <div>
+      
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/概率论与数理统计/连续型随机变量/">连续型随机变量</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年07月24日 - 15:07</p> <p><span>最后更新:</span>2019年07月24日 - 16:07</p> <p><span>原始链接:</span><a href="/概率论与数理统计/连续型随机变量/" title="连续型随机变量">http://yoursite.com/概率论与数理统计/连续型随机变量/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/概率论与数理统计/连续型随机变量/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script> 
+      
+    </div>
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/概率论与数理统计/" rel="tag"><i class="fa fa-tag"></i>概率论与数理统计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/概率论与数理统计/离散型随机变量/" rel="next" title="离散型随机变量">
+                <i class="fa fa-chevron-left"></i> 离散型随机变量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+<div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+    
+ </div>
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -481,8 +647,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -608,6 +783,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分布函数"><span class="nav-number">1.</span> <span class="nav-text">分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连续随机变量"><span class="nav-number">2.</span> <span class="nav-text">连续随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概率密度函数的性质"><span class="nav-number">2.1.</span> <span class="nav-text">概率密度函数的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#均匀分布"><span class="nav-number">3.</span> <span class="nav-text">均匀分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#均匀分布性质"><span class="nav-number">3.2.</span> <span class="nav-text">均匀分布性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数分布"><span class="nav-number">4.</span> <span class="nav-text">指数分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">4.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指数分布性质"><span class="nav-number">4.2.</span> <span class="nav-text">指数分布性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指数分布用途"><span class="nav-number">4.3.</span> <span class="nav-text">指数分布用途</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正态分布"><span class="nav-number">5.</span> <span class="nav-text">正态分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2"><span class="nav-number">5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用途"><span class="nav-number">5.2.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准正态分布"><span class="nav-number">5.3.</span> <span class="nav-text">标准正态分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准正态分布表"><span class="nav-number">5.3.1.</span> <span class="nav-text">标准正态分布表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准正态分布性质"><span class="nav-number">5.3.2.</span> <span class="nav-text">标准正态分布性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正态分布性质"><span class="nav-number">5.4.</span> <span class="nav-text">正态分布性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3σ准则"><span class="nav-number">5.5.</span> <span class="nav-text">3σ准则</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -790,6 +982,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -805,6 +1001,8 @@
 
   
 
+
+  
 
 
   
