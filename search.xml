@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[二元离散型随机变量]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%2F</url>
+    <content type="text"><![CDATA[二元随机变量定义&nbsp; 二元离散随机变量定义&nbsp; 二元离散随机变量的联合概率分布律定义&nbsp; 联合概率分布律的性质&nbsp; 例&nbsp;&nbsp; 边际分布定义&nbsp;&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[连续型随机变量]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%2F</url>
     <content type="text"><![CDATA[分布函数&nbsp; 连续随机变量&nbsp; 概率密度函数的性质&nbsp;&nbsp;&nbsp;&nbsp; 均匀分布定义&nbsp; 均匀分布性质&nbsp; 指数分布定义&nbsp; 指数分布性质&nbsp;&nbsp;&nbsp; 指数分布用途&nbsp; 正态分布定义&nbsp;&nbsp; 用途&nbsp; 标准正态分布&nbsp; 标准正态分布表&nbsp; 标准正态分布性质&nbsp; 正态分布性质&nbsp; 3σ准则&nbsp;]]></content>

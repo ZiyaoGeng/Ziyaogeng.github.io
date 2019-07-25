@@ -101,29 +101,27 @@
 
 
 
-  <meta name="description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
-<meta name="keywords" content="Machine Learning,Theory">
+  <meta name="description" content="二元随机变量定义&amp;nbsp; 二元离散随机变量定义&amp;nbsp; 二元离散随机变量的联合概率分布律定义&amp;nbsp; 联合概率分布律的性质&amp;nbsp; 例&amp;nbsp;&amp;nbsp; 边际分布定义&amp;nbsp;&amp;nbsp;">
+<meta name="keywords" content="概率论与数理统计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Perceptron">
-<meta property="og:url" content="http://yoursite.com/machine learning/Perceptron/index.html">
+<meta property="og:title" content="二元离散型随机变量">
+<meta property="og:url" content="http://yoursite.com/概率论与数理统计/二元离散型随机变量/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
+<meta property="og:description" content="二元随机变量定义&amp;nbsp; 二元离散随机变量定义&amp;nbsp; 二元离散随机变量的联合概率分布律定义&amp;nbsp; 联合概率分布律的性质&amp;nbsp; 例&amp;nbsp;&amp;nbsp; 边际分布定义&amp;nbsp;&amp;nbsp;">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/1.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/3.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/4.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/2.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/5.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/6.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/7.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/8.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/9.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/10.jpg">
-<meta property="og:updated_time" content="2019-06-30T07:08:18.000Z">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/2.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/3.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/4.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/5.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/6.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/7.png">
+<meta property="og:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/8.png">
+<meta property="og:updated_time" content="2019-07-25T09:09:26.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Perceptron">
-<meta name="twitter:description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
-<meta name="twitter:image" content="http://yoursite.com/images/perceptron/1.jpg">
+<meta name="twitter:title" content="二元离散型随机变量">
+<meta name="twitter:description" content="二元随机变量定义&amp;nbsp; 二元离散随机变量定义&amp;nbsp; 二元离散随机变量的联合概率分布律定义&amp;nbsp; 联合概率分布律的性质&amp;nbsp; 例&amp;nbsp;&amp;nbsp; 边际分布定义&amp;nbsp;&amp;nbsp;">
+<meta name="twitter:image" content="http://yoursite.com/images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png">
 
 
 
@@ -131,7 +129,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/machine learning/Perceptron/">
+  <link rel="canonical" href="http://yoursite.com/概率论与数理统计/二元离散型随机变量/">
 
 
 
@@ -141,7 +139,7 @@
   };
 </script>
 
-  <title>Perceptron | Record</title>
+  <title>二元离散型随机变量 | Record</title>
   
 
 
@@ -368,7 +366,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/machine learning/Perceptron/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/概率论与数理统计/二元离散型随机变量/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="江火似流萤">
@@ -385,7 +383,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Perceptron
+          <h1 class="post-title" itemprop="name headline">二元离散型随机变量
 
               
             
@@ -411,7 +409,7 @@
                 
               
 
-              <time title="Created: 2019-06-30 10:01:36 / Modified: 15:08:18" itemprop="dateCreated datePublished" datetime="2019-06-30T10:01:36+08:00">2019-06-30</time>
+              <time title="Created: 2019-07-25 15:53:24 / Modified: 17:09:26" itemprop="dateCreated datePublished" datetime="2019-07-25T15:53:24+08:00">2019-07-25</time>
             
 
             
@@ -433,7 +431,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/概率论与数理统计/" itemprop="url" rel="index"><span itemprop="name">概率论与数理统计</span></a></span>
 
                 
                 
@@ -503,14 +501,12 @@
       
 
       
-        <h2 id="M-P神经元"><a href="#M-P神经元" class="headerlink" title="M-P神经元"></a>M-P神经元</h2><p>神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。<br><img src="../../images/perceptron/1.jpg" alt><br>在上述模型中，神经元收到来自n个其他神经元传递过来的输入信号，这些输入信号通过带权重的连接进行传递，神经元接收到的总输入值将与神经元的阈值进行比较，然后通过“激活函数（activation function”）处理以产生神经元的输出。<br>这样把许多这样的神经元按一定的层次结构连接起来，就得到了神经网络。 </p>
-<h2 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h2><p>感知机（Perceptron）是神经网络和支持向量机的基础。  </p>
-<h3 id="感知机原理"><a href="#感知机原理" class="headerlink" title="感知机原理"></a>感知机原理</h3><p>感知机是二分类的线性模型，其输入是实例的特征向量，输出的是事例的类别，分别是+1和-1，属于判别模型。<br>假设训练数据集是线性可分的，<strong>即存在一个线性超平面能将它们分开</strong>，而感知机的学习过程就一定会收敛（converge）而求得适当的权向量w=（w1;w2;…;wn);最后求得一个能够将训练数据集正实例点和负实例点完全正确分开的分离超平面，如下图。<br><img src="../../images/perceptron/3.jpg" alt><br>如果是非线性可分的数据，感知机学习过程将会发生振荡（fluctuation），w难以稳定下来，不能求得合适解，最后无法获得超平面。<br><img src="../../images/perceptron/4.jpg" alt>  </p>
-<h3 id="感知机结构"><a href="#感知机结构" class="headerlink" title="感知机结构"></a>感知机结构</h3><p>它有两层神经元组成，输入层接收外界输入信号传递给输出层，输出层是M-P神经元，如下图<br><img src="../../images/perceptron/2.jpg" alt>  </p>
-<h3 id="感知机学习过程"><a href="#感知机学习过程" class="headerlink" title="感知机学习过程"></a>感知机学习过程</h3><p>对于输出<img src="../../images/perceptron/5.jpg" alt>，权重wi(i=1,2,…,n)以及阈值θ可通过学习得到。阈值θ可看做一个固定输入为-1.0的“哑结点”所对应的连接权重w(n+1)，这样，权重和阈值的学习就可统一为权重的学习。<br>感知机的学习规则非常简单，对训练样例(x,y)，若当前感知机的输出为<img src="../../images/perceptron/6.jpg" alt>，则感知机的权重调整为：<br><img src="../../images/perceptron/7.jpg" alt><br>其中<img src="../../images/perceptron/8.jpg" alt>称为学习率（learning rate）。  </p>
-<h3 id="感知机解决非线性问题"><a href="#感知机解决非线性问题" class="headerlink" title="感知机解决非线性问题"></a>感知机解决非线性问题</h3><p>要解决非线性可分问题，需要考虑使用多层功能神经元。如下图则可用两层感知机解决问题。<br><img src="../../images/perceptron/9.jpg" alt><br>输出层与输入层之间的一层神经元，被称为隐含层（hidden layer），隐含层和输出层神经元都是拥有激活函数的功能神经元</p>
-<h2 id="多层前馈神经网络"><a href="#多层前馈神经网络" class="headerlink" title="多层前馈神经网络"></a>多层前馈神经网络</h2><p>常见的神经网络如下图所示（由两层或两层以上的感知机所组成）。<br><img src="../../images/perceptron/10.jpg" alt><br>每一层神经元与下一层神经元全互连，神经元之间不存在同层连接，也不存在跨层连接，这样的神经网络结构通常称为“多层前馈神经网络”（multi-layer feedforward neural networks），其中输入层神经元接收外界输入，隐层与输出层神经元对信号进行加工，最终结果由输出层神经元输出。<br>神经网络的学习过程，就是根据训练数据来调整神经元之间的连接权以及每个功能神经元的阈值，神经网络“学”到的东西，蕴含在连接权与阈值之中。<br><strong>注：“前馈”是指网络拓扑结构上不存在环或回路</strong>  </p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1]<a href="https://www.cnblogs.com/huangyc/p/9706575.html" target="_blank" rel="noopener">感知机原理（perceptron）</a><br>[2]周志华.机器学习.北京：清华大学出版社，2016年</p>
+        <h2 id="二元随机变量"><a href="#二元随机变量" class="headerlink" title="二元随机变量"></a>二元随机变量</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/1.png" alt></p>
+<h2 id="二元离散随机变量"><a href="#二元离散随机变量" class="headerlink" title="二元离散随机变量"></a>二元离散随机变量</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/2.png" alt></p>
+<h3 id="二元离散随机变量的联合概率分布律"><a href="#二元离散随机变量的联合概率分布律" class="headerlink" title="二元离散随机变量的联合概率分布律"></a>二元离散随机变量的联合概率分布律</h3><h4 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h4><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/3.png" alt></p>
+<h4 id="联合概率分布律的性质"><a href="#联合概率分布律的性质" class="headerlink" title="联合概率分布律的性质"></a>联合概率分布律的性质</h4><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/4.png" alt></p>
+<h4 id="例"><a href="#例" class="headerlink" title="例"></a>例</h4><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/5.png" alt><br>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/6.png" alt></p>
+<h3 id="边际分布"><a href="#边际分布" class="headerlink" title="边际分布"></a>边际分布</h3><h4 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h4><p>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/7.png" alt><br>&nbsp;<img src="../../images/%E4%BA%8C%E5%85%83%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/8.png" alt></p>
 
       
     </div>
@@ -523,7 +519,19 @@
 
     <div>
       
-        
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/概率论与数理统计/二元离散型随机变量/">二元离散型随机变量</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年07月25日 - 15:07</p> <p><span>最后更新:</span>2019年07月25日 - 17:07</p> <p><span>原始链接:</span><a href="/概率论与数理统计/二元离散型随机变量/" title="二元离散型随机变量">http://yoursite.com/概率论与数理统计/二元离散型随机变量/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/概率论与数理统计/二元离散型随机变量/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script> 
       
     </div>
     
@@ -543,9 +551,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i>Machine Learning</a>
-          
-            <a href="/tags/Theory/" rel="tag"><i class="fa fa-tag"></i>Theory</a>
+            <a href="/tags/概率论与数理统计/" rel="tag"><i class="fa fa-tag"></i>概率论与数理统计</a>
           
         </div>
       
@@ -558,8 +564,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/machine learning/BackPropagation/" rel="next" title="BackPropagation">
-                <i class="fa fa-chevron-left"></i> BackPropagation
+              <a href="/概率论与数理统计/连续型随机变量/" rel="next" title="连续型随机变量">
+                <i class="fa fa-chevron-left"></i> 连续型随机变量
               </a>
             
           </div>
@@ -567,10 +573,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/examples/手写数字分类/" rel="prev" title="手写数字分类">
-                手写数字分类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -770,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#M-P神经元"><span class="nav-number">1.</span> <span class="nav-text">M-P神经元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感知机"><span class="nav-number">2.</span> <span class="nav-text">感知机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机原理"><span class="nav-number">2.1.</span> <span class="nav-text">感知机原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机结构"><span class="nav-number">2.2.</span> <span class="nav-text">感知机结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机学习过程"><span class="nav-number">2.3.</span> <span class="nav-text">感知机学习过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机解决非线性问题"><span class="nav-number">2.4.</span> <span class="nav-text">感知机解决非线性问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多层前馈神经网络"><span class="nav-number">3.</span> <span class="nav-text">多层前馈神经网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二元随机变量"><span class="nav-number">1.</span> <span class="nav-text">二元随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二元离散随机变量"><span class="nav-number">2.</span> <span class="nav-text">二元离散随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二元离散随机变量的联合概率分布律"><span class="nav-number">2.2.</span> <span class="nav-text">二元离散随机变量的联合概率分布律</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义-2"><span class="nav-number">2.2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联合概率分布律的性质"><span class="nav-number">2.2.2.</span> <span class="nav-text">联合概率分布律的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例"><span class="nav-number">2.2.3.</span> <span class="nav-text">例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边际分布"><span class="nav-number">2.3.</span> <span class="nav-text">边际分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义-3"><span class="nav-number">2.3.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
