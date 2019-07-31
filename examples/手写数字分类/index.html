@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。 123456789(train_i">
+  <meta name="description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。123456789(train_im">
 <meta name="keywords" content="Deep Learning,Multiclass Classification,Keras">
 <meta property="og:type" content="article">
 <meta property="og:title" content="手写数字分类">
 <meta property="og:url" content="http://yoursite.com/examples/手写数字分类/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。 123456789(train_i">
+<meta property="og:description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。123456789(train_im">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-07-03T07:50:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手写数字分类">
-<meta name="twitter:description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。 123456789(train_i">
+<meta name="twitter:description" content="前言MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。   正文数据预处理本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。对训练集、测试集样本转换为4D张量，并将其标准化。对训练集、测试集标签将其向量化。123456789(train_im">
 
 
 
@@ -505,19 +505,12 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>MNIST问题可以称作深度学习中的“Hello World”。它与新闻分类一样，也是一个多分类问题。本例采用MNIST数据集，并且使用卷积神经网络模型来解决手写数字识别问题。  </p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><p>本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。<br>对训练集、测试集样本转换为4D张量，并将其标准化。<br>对训练集、测试集标签将其向量化。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(train_images, train_labels), (test_images, test_labels) = mnist.load_data()</span><br><span class="line">train_images = train_images.reshape((<span class="number">60000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">train_images = train_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">test_images = test_images.reshape((<span class="number">10000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">test_images = test_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">train_labels = to_categorical(train_labels)</span><br><span class="line">test_labels = to_categorical(test_labels)</span><br></pre></td></tr></table></figure>
-
-<h3 id="构建网络"><a href="#构建网络" class="headerlink" title="构建网络"></a>构建网络</h3><p>采用一层卷积层，一层池化层，一层卷积层，一层池化层，一层卷积层，两层全连接层。<br>在最后一层卷积层中，需要对3D数据转化为1D数据。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">model = models.Sequential()</span><br><span class="line">model.add(layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>, input_shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.MaxPooling2D(<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Flatten())</span><br><span class="line">model.add(layers.Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Dense(<span class="number">10</span>, activation=<span class="string">'softmax'</span>))</span><br></pre></td></tr></table></figure>
-
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><p>本例采用训练集样本为60000，测试集样本为10000，每张图片大小均为28*28。<br>对训练集、测试集样本转换为4D张量，并将其标准化。<br>对训练集、测试集标签将其向量化。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(train_images, train_labels), (test_images, test_labels) = mnist.load_data()</span><br><span class="line">train_images = train_images.reshape((<span class="number">60000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">train_images = train_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">test_images = test_images.reshape((<span class="number">10000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">test_images = test_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">train_labels = to_categorical(train_labels)</span><br><span class="line">test_labels = to_categorical(test_labels)</span><br></pre></td></tr></table></figure></p>
+<h3 id="构建网络"><a href="#构建网络" class="headerlink" title="构建网络"></a>构建网络</h3><p>采用一层卷积层，一层池化层，一层卷积层，一层池化层，一层卷积层，两层全连接层。<br>在最后一层卷积层中，需要对3D数据转化为1D数据。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">model = models.Sequential()</span><br><span class="line">model.add(layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>, input_shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.MaxPooling2D(<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Flatten())</span><br><span class="line">model.add(layers.Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Dense(<span class="number">10</span>, activation=<span class="string">'softmax'</span>))</span><br></pre></td></tr></table></figure></p>
 <h3 id="编译模型"><a href="#编译模型" class="headerlink" title="编译模型"></a>编译模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">model.compile(</span><br><span class="line">    optimizer=<span class="string">'rmsprop'</span>,</span><br><span class="line">    loss=<span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">    metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
-
 <h3 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">5</span>, batch_size=<span class="number">64</span>)</span><br></pre></td></tr></table></figure>
-
 <h3 id="结果与分析"><a href="#结果与分析" class="headerlink" title="结果与分析"></a>结果与分析</h3><p>模型在测试集中进行评估，损失度与准确度为：<code>0.027598469233673314 0.9916</code>，比简单的密集连接模型的准确度97.8%要高。  </p>
 <h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> layers</span><br><span class="line"><span class="keyword">from</span> keras <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">from</span> keras.utils <span class="keyword">import</span> to_categorical</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line">(train_images, train_labels), (test_images, test_labels) = mnist.load_data()</span><br><span class="line">train_images = train_images.reshape((<span class="number">60000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">train_images = train_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">test_images = test_images.reshape((<span class="number">10000</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>))</span><br><span class="line">test_images = test_images.astype(<span class="string">'float32'</span>) / <span class="number">255</span></span><br><span class="line"></span><br><span class="line">train_labels = to_categorical(train_labels)</span><br><span class="line">test_labels = to_categorical(test_labels)</span><br><span class="line"></span><br><span class="line">model = models.Sequential()</span><br><span class="line">model.add(layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>, input_shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>)))</span><br><span class="line">model.add(layers.MaxPooling2D((<span class="number">2</span>, <span class="number">2</span>)))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.MaxPooling2D(<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">model.add(layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>, <span class="number">3</span>), activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Flatten())</span><br><span class="line">model.add(layers.Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>))</span><br><span class="line">model.add(layers.Dense(<span class="number">10</span>, activation=<span class="string">'softmax'</span>))</span><br><span class="line"></span><br><span class="line">model.compile(</span><br><span class="line">    optimizer=<span class="string">'rmsprop'</span>,</span><br><span class="line">    loss=<span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">    metrics=[<span class="string">'accuracy'</span>])</span><br><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">5</span>, batch_size=<span class="number">64</span>)</span><br><span class="line"></span><br><span class="line">test_loss, test_acc = model.evaluate(test_images, test_labels)</span><br><span class="line">print(test_loss, test_acc)</span><br></pre></td></tr></table></figure>
-
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>理解卷积神经网络的基本概念，即特征图、卷积、最大池化。  </p>
 
       
@@ -660,7 +653,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -683,7 +676,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -716,7 +711,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1321,6 +1320,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
