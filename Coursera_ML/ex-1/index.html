@@ -101,18 +101,26 @@
 
 
 
-  <meta name="description" content="GZY的个人博客">
+  <meta name="description" content="Linear regression with one variablePlotting the DataRead the Data使用pandas库中的read_csv将数据读入。1234import pandas as pddata = pd.read_csv(&apos;./ex1data1.txt&apos;,     names=[&apos;Population&apos;,&apos;Profit&apos;]) Plotting the Sc">
 <meta name="keywords" content="Machine Learning,Coursera_ML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ex_1">
 <meta property="og:url" content="http://yoursite.com/Coursera_ML/ex-1/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="GZY的个人博客">
+<meta property="og:description" content="Linear regression with one variablePlotting the DataRead the Data使用pandas库中的read_csv将数据读入。1234import pandas as pddata = pd.read_csv(&apos;./ex1data1.txt&apos;,     names=[&apos;Population&apos;,&apos;Profit&apos;]) Plotting the Sc">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-31T07:21:10.575Z">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/1.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/2.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/3.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/6.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/4.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/7.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_1/5.png">
+<meta property="og:updated_time" content="2019-08-01T06:22:03.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ex_1">
-<meta name="twitter:description" content="GZY的个人博客">
+<meta name="twitter:description" content="Linear regression with one variablePlotting the DataRead the Data使用pandas库中的read_csv将数据读入。1234import pandas as pddata = pd.read_csv(&apos;./ex1data1.txt&apos;,     names=[&apos;Population&apos;,&apos;Profit&apos;]) Plotting the Sc">
+<meta name="twitter:image" content="http://yoursite.com/images/ex_1/1.png">
 
 
 
@@ -400,12 +408,24 @@
                 
               
 
-              <time title="Created: 2019-07-31 14:51:17 / Modified: 15:21:10" itemprop="dateCreated datePublished" datetime="2019-07-31T14:51:17+08:00">2019-07-31</time>
+              <time title="Created: 2019-07-31 14:51:17" itemprop="dateCreated datePublished" datetime="2019-07-31T14:51:17+08:00">2019-07-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-01 14:22:03" itemprop="dateModified" datetime="2019-08-01T14:22:03+08:00">2019-08-01</time>
               
             
           </span>
@@ -492,7 +512,23 @@
       
 
       
-        
+        <h2 id="Linear-regression-with-one-variable"><a href="#Linear-regression-with-one-variable" class="headerlink" title="Linear regression with one variable"></a>Linear regression with one variable</h2><h3 id="Plotting-the-Data"><a href="#Plotting-the-Data" class="headerlink" title="Plotting the Data"></a>Plotting the Data</h3><h4 id="Read-the-Data"><a href="#Read-the-Data" class="headerlink" title="Read the Data"></a>Read the Data</h4><p>使用pandas库中的read_csv将数据读入。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(<span class="string">'./ex1data1.txt'</span>, </span><br><span class="line">    names=[<span class="string">'Population'</span>,<span class="string">'Profit'</span>])</span><br></pre></td></tr></table></figure></p>
+<h4 id="Plotting-the-Scatter-Plot"><a href="#Plotting-the-Scatter-Plot" class="headerlink" title="Plotting the Scatter Plot"></a>Plotting the Scatter Plot</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.scatter(data[<span class="string">'Population'</span>], data[<span class="string">'Profit'</span>], </span><br><span class="line">    marker=<span class="string">'x'</span>, c=<span class="string">'r'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Population of City in 10,000s'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Profit in $10,000s'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>散点图如下所示：<br>&nbsp;<img src="../../images/ex_1/1.png" alt></p>
+<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><h4 id="Update-Equations"><a href="#Update-Equations" class="headerlink" title="Update Equations"></a>Update Equations</h4><p>The objective of linear regression is to minimize the cost function<br>                                                $J(\theta)=\frac{1}{2m}\displaystyle\sum^{m}_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$</p>
+<p>where the hypothesis $h_\theta(x)$ is given by the linear model<br>                                                $h_\theta(x)=\theta^Tx=\theta_0+\theta_1x_1$</p>
+<p>Recall that the parameters of your model are the $\theta_j$ values. These are the values you will adjust to minimize cost $J(\theta)$. One way to do this is to use the batch gradient descent algorithm. In batch gradient descent, each iteration performs the update<br>                                                $\theta_j:=\theta_j-\alpha\frac{1}{m}\displaystyle\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x^{(i)}_j$</p>
+<p>With each step of gradient descent, your parameters $\theta_j$ come closer to the optimal values that will achieve the lowest cost $J(\theta)$.</p>
+<h4 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h4><p>初始参数为0向量，学习率(learning rate)$\alpha$为0.01，迭代次数为1500<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">theta =  np.zeros((<span class="number">2</span>,))</span><br><span class="line">iterations = <span class="number">1500</span></span><br><span class="line">alpha = <span class="number">0.01</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="Computing-the-cost-J-theta"><a href="#Computing-the-cost-J-theta" class="headerlink" title="Computing the cost $J(\theta)$"></a>Computing the cost $J(\theta)$</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">computeCost</span><span class="params">(theta, X, y)</span>:</span></span><br><span class="line">    h = np.dot(X, theta)</span><br><span class="line">    <span class="comment"># np.sum为向量相加</span></span><br><span class="line">    <span class="keyword">return</span> np.sum(np.power(h-y,<span class="number">2</span>)) / (<span class="number">2</span> * len(y))</span><br></pre></td></tr></table></figure>
+<h4 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h4><p>假设$\alpha=0.01,iterations=1500,$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradientDescent</span><span class="params">(X, y, theta, alpha, num_iters)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> iters <span class="keyword">in</span> range(num_iters):</span><br><span class="line">        h = np.dot(X, theta)</span><br><span class="line">        theta -= alpha * np.dot(X.T, (h - y)) / len(y)</span><br><span class="line"></span><br><span class="line">theta =  np.zeros((<span class="number">2</span>,))</span><br><span class="line">iterations = <span class="number">1500</span></span><br><span class="line">alpha = <span class="number">0.01</span></span><br><span class="line"></span><br><span class="line">y = np.array(data.iloc[:,<span class="number">1</span>])</span><br><span class="line">X = np.array(data.iloc[:,<span class="number">0</span>])</span><br><span class="line">X = np.c_[np.ones((len(y), <span class="number">1</span>)), X]</span><br><span class="line"></span><br><span class="line"><span class="comment"># gradientDescent</span></span><br><span class="line">gradientDescent(X, y, theta, alpha, iterations)</span><br></pre></td></tr></table></figure></p>
+<h4 id="Plotting-the-linear-fit"><a href="#Plotting-the-linear-fit" class="headerlink" title="Plotting the linear fit"></a>Plotting the linear fit</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotLinearPlot</span><span class="params">(theta)</span>:</span></span><br><span class="line">    x = range(<span class="number">4</span>,<span class="number">25</span>,<span class="number">2</span>)</span><br><span class="line">    Y = theta[<span class="number">0</span>] + theta[<span class="number">1</span>]*x</span><br><span class="line">    plt.plot(x, Y, label=<span class="string">'Linear regression'</span>)</span><br></pre></td></tr></table></figure>
+<p>拟合结果如下：<br>&nbsp;<img src="../../images/ex_1/2.png" alt></p>
+<h3 id="Visualizing-J-theta"><a href="#Visualizing-J-theta" class="headerlink" title="Visualizing $J(\theta)$"></a>Visualizing $J(\theta)$</h3><p>&nbsp;<img src="../../images/ex_1/3.png" alt></p>
+<h2 id="Linear-regression-with-multiple-variables"><a href="#Linear-regression-with-multiple-variables" class="headerlink" title="Linear regression with multiple variables"></a>Linear regression with multiple variables</h2><h3 id="Feature-Normalization"><a href="#Feature-Normalization" class="headerlink" title="Feature Normalization"></a>Feature Normalization</h3><p>因为两个特征的数值相差近1000倍，故我们需要对其进行特征缩放（feature scaling），来加快梯度下降的收敛速度。<br>对于每一个特征值，我们采用:<br>$\frac{x^{(i)}-mean}{std}$, $std$为标准差（standard deviations），<br>来特征缩放。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">featureNormalize</span><span class="params">(X)</span>:</span></span><br><span class="line">    mean = np.ones((len(X), <span class="number">2</span>)) * np.array([np.mean(X[:, <span class="number">0</span>]),</span><br><span class="line">        np.mean(X[:, <span class="number">1</span>])])</span><br><span class="line">    std = np.ones((len(X), <span class="number">2</span>)) * np.array([np.std(X[:, <span class="number">0</span>]),</span><br><span class="line">        np.std(X[:, <span class="number">1</span>])])</span><br><span class="line">    <span class="keyword">return</span> (X - mean) / std</span><br></pre></td></tr></table></figure></p>
+<h3 id="Gradient-Descent-1"><a href="#Gradient-Descent-1" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">cost = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">computeCostMulti</span><span class="params">(theta, X, y)</span>:</span></span><br><span class="line">    h = np.dot(X, theta)</span><br><span class="line">    <span class="keyword">return</span> np.sum(np.power(h - y, <span class="number">2</span>)) / (<span class="number">2</span> * len(y))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradientDescentMulti</span><span class="params">(theta, X, y, alpha, num_iters)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> iter <span class="keyword">in</span> range(num_iters):</span><br><span class="line">        cost.append(computeCostMulti(theta, X, y))</span><br><span class="line">        h = np.dot(X, theta)</span><br><span class="line">        theta -= alpha * np.dot(X.T, h - y) / len(y)</span><br><span class="line">    <span class="keyword">return</span> theta</span><br><span class="line"></span><br><span class="line">X = np.array([data[<span class="string">'size'</span>], data[<span class="string">'num'</span>]]).T</span><br><span class="line">X = X.astype(<span class="string">'float'</span>)</span><br><span class="line">X = featureNormalize(X)</span><br><span class="line">X = np.c_[np.ones((len(X), <span class="number">1</span>)), X]</span><br><span class="line">y = np.array(data.iloc[:,<span class="number">2</span>])</span><br><span class="line">theta = np.zeros((len(X[<span class="number">0</span>]), ))</span><br><span class="line"></span><br><span class="line">theta = gradientDescentMulti(theta, X, y, <span class="number">0.03</span>, <span class="number">50</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Selecting-learning-rates"><a href="#Selecting-learning-rates" class="headerlink" title="Selecting learning rates"></a>Selecting learning rates</h4><p>当$\alpha$=0.3时，cost随迭代次数的变化曲线为：<br>&nbsp;<img src="../../images/ex_1/6.png" alt><br>当$\alpha$=0.1时，cost随迭代次数的变化曲线为：<br>&nbsp;<img src="../../images/ex_1/4.png" alt><br>当$\alpha$=0.03时，cost随迭代次数的变化曲线为：<br>&nbsp;<img src="../../images/ex_1/7.png" alt><br>当$\alpha$=0.01时，cost随迭代次数的变化曲线为：<br>&nbsp;<img src="../../images/ex_1/5.png" alt><br>由以上可以得出，$\alpha=0.1$是一个较为合适的学习率。</p>
+
       
     </div>
 
@@ -504,7 +540,7 @@
 
     <div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/Coursera_ML/ex-1/">ex_1</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年07月31日 - 14:07</p> <p><span>最后更新:</span>2019年07月31日 - 15:07</p> <p><span>原始链接:</span><a href="/Coursera_ML/ex-1/" title="ex_1">http://yoursite.com/Coursera_ML/ex-1/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/Coursera_ML/ex-1/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/Coursera_ML/ex-1/">ex_1</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年07月31日 - 14:07</p> <p><span>最后更新:</span>2019年08月01日 - 14:08</p> <p><span>原始链接:</span><a href="/Coursera_ML/ex-1/" title="ex_1">http://yoursite.com/Coursera_ML/ex-1/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/Coursera_ML/ex-1/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
     var clipboard = new Clipboard('.fa-clipboard');
     $(".fa-clipboard").click(function(){
       clipboard.on('success', function(){
@@ -616,8 +652,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -749,6 +794,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-regression-with-one-variable"><span class="nav-number">1.</span> <span class="nav-text">Linear regression with one variable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Plotting-the-Data"><span class="nav-number">1.1.</span> <span class="nav-text">Plotting the Data</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Read-the-Data"><span class="nav-number">1.1.1.</span> <span class="nav-text">Read the Data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plotting-the-Scatter-Plot"><span class="nav-number">1.1.2.</span> <span class="nav-text">Plotting the Scatter Plot</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">1.2.</span> <span class="nav-text">Gradient Descent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Update-Equations"><span class="nav-number">1.2.1.</span> <span class="nav-text">Update Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementation"><span class="nav-number">1.2.2.</span> <span class="nav-text">Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Computing-the-cost-J-theta"><span class="nav-number">1.2.3.</span> <span class="nav-text">Computing the cost $J(\theta)$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-descent"><span class="nav-number">1.2.4.</span> <span class="nav-text">Gradient descent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plotting-the-linear-fit"><span class="nav-number">1.2.5.</span> <span class="nav-text">Plotting the linear fit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visualizing-J-theta"><span class="nav-number">1.3.</span> <span class="nav-text">Visualizing $J(\theta)$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-regression-with-multiple-variables"><span class="nav-number">2.</span> <span class="nav-text">Linear regression with multiple variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Feature-Normalization"><span class="nav-number">2.1.</span> <span class="nav-text">Feature Normalization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent-1"><span class="nav-number">2.2.</span> <span class="nav-text">Gradient Descent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Selecting-learning-rates"><span class="nav-number">2.2.1.</span> <span class="nav-text">Selecting learning rates</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1289,6 +1351,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
