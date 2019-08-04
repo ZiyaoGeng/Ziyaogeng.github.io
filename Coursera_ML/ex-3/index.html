@@ -101,29 +101,20 @@
 
 
 
-  <meta name="description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
-<meta name="keywords" content="Machine Learning,Theory">
+  <meta name="description" content="Multi-class Classification以下代码引用如下包：123456import scipyimport scipy.optimize as opfrom scipy.io import loadmatfrom PIL import Imageimport pandas as pd import numpy as np Dataset该数据集是由5000个样本组成的手写数字组成的，">
+<meta name="keywords" content="Machine Learning,Coursera_ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Perceptron">
-<meta property="og:url" content="http://yoursite.com/machine learning/Perceptron/index.html">
+<meta property="og:title" content="ex-3">
+<meta property="og:url" content="http://yoursite.com/Coursera_ML/ex-3/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
+<meta property="og:description" content="Multi-class Classification以下代码引用如下包：123456import scipyimport scipy.optimize as opfrom scipy.io import loadmatfrom PIL import Imageimport pandas as pd import numpy as np Dataset该数据集是由5000个样本组成的手写数字组成的，">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/1.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/3.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/4.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/2.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/5.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/6.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/7.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/8.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/9.jpg">
-<meta property="og:image" content="http://yoursite.com/images/perceptron/10.jpg">
-<meta property="og:updated_time" content="2019-06-30T07:08:18.000Z">
+<meta property="og:image" content="http://yoursite.com/images/ex_3/1.png">
+<meta property="og:updated_time" content="2019-08-04T08:41:18.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Perceptron">
-<meta name="twitter:description" content="M-P神经元神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。在上述模型中，神经元收到来自n个其他神经元传递过">
-<meta name="twitter:image" content="http://yoursite.com/images/perceptron/1.jpg">
+<meta name="twitter:title" content="ex-3">
+<meta name="twitter:description" content="Multi-class Classification以下代码引用如下包：123456import scipyimport scipy.optimize as opfrom scipy.io import loadmatfrom PIL import Imageimport pandas as pd import numpy as np Dataset该数据集是由5000个样本组成的手写数字组成的，">
+<meta name="twitter:image" content="http://yoursite.com/images/ex_3/1.png">
 
 
 
@@ -131,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/machine learning/Perceptron/">
+  <link rel="canonical" href="http://yoursite.com/Coursera_ML/ex-3/">
 
 
 
@@ -141,7 +132,7 @@
   };
 </script>
 
-  <title>Perceptron | Record</title>
+  <title>ex-3 | Record</title>
   
 
 
@@ -368,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/machine learning/Perceptron/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Coursera_ML/ex-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="江火似流萤">
@@ -385,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Perceptron
+          <h1 class="post-title" itemprop="name headline">ex-3
 
               
             
@@ -411,7 +402,7 @@
                 
               
 
-              <time title="Created: 2019-06-30 10:01:36 / Modified: 15:08:18" itemprop="dateCreated datePublished" datetime="2019-06-30T10:01:36+08:00">2019-06-30</time>
+              <time title="Created: 2019-08-04 14:38:00 / Modified: 16:41:18" itemprop="dateCreated datePublished" datetime="2019-08-04T14:38:00+08:00">2019-08-04</time>
             
 
             
@@ -433,7 +424,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coursera-ML/" itemprop="url" rel="index"><span itemprop="name">Coursera_ML</span></a></span>
 
                 
                 
@@ -503,14 +494,27 @@
       
 
       
-        <h2 id="M-P神经元"><a href="#M-P神经元" class="headerlink" title="M-P神经元"></a>M-P神经元</h2><p>神经网络中最基本的成分就是神经元（neuron）模型。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向相连的神经元发送化学物质，从而改变这些神经元内的电位；如果某神经元的电位超过了一个阈值（threshold），那么它就会被激活，即“兴奋”起来，向其他神经元发送化学物质。M-P神经元就是将上述情形进行抽象所得，如下图。<br><img src="../../images/perceptron/1.jpg" alt><br>在上述模型中，神经元收到来自n个其他神经元传递过来的输入信号，这些输入信号通过带权重的连接进行传递，神经元接收到的总输入值将与神经元的阈值进行比较，然后通过“激活函数（activation function”）处理以产生神经元的输出。<br>这样把许多这样的神经元按一定的层次结构连接起来，就得到了神经网络。 </p>
-<h2 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h2><p>感知机（Perceptron）是神经网络和支持向量机的基础。  </p>
-<h3 id="感知机原理"><a href="#感知机原理" class="headerlink" title="感知机原理"></a>感知机原理</h3><p>感知机是二分类的线性模型，其输入是实例的特征向量，输出的是事例的类别，分别是+1和-1，属于判别模型。<br>假设训练数据集是线性可分的，<strong>即存在一个线性超平面能将它们分开</strong>，而感知机的学习过程就一定会收敛（converge）而求得适当的权向量w=（w1;w2;…;wn);最后求得一个能够将训练数据集正实例点和负实例点完全正确分开的分离超平面，如下图。<br><img src="../../images/perceptron/3.jpg" alt><br>如果是非线性可分的数据，感知机学习过程将会发生振荡（fluctuation），w难以稳定下来，不能求得合适解，最后无法获得超平面。<br><img src="../../images/perceptron/4.jpg" alt>  </p>
-<h3 id="感知机结构"><a href="#感知机结构" class="headerlink" title="感知机结构"></a>感知机结构</h3><p>它有两层神经元组成，输入层接收外界输入信号传递给输出层，输出层是M-P神经元，如下图<br><img src="../../images/perceptron/2.jpg" alt>  </p>
-<h3 id="感知机学习过程"><a href="#感知机学习过程" class="headerlink" title="感知机学习过程"></a>感知机学习过程</h3><p>对于输出<img src="../../images/perceptron/5.jpg" alt>，权重wi(i=1,2,…,n)以及阈值θ可通过学习得到。阈值θ可看做一个固定输入为-1.0的“哑结点”所对应的连接权重w(n+1)，这样，权重和阈值的学习就可统一为权重的学习。<br>感知机的学习规则非常简单，对训练样例(x,y)，若当前感知机的输出为<img src="../../images/perceptron/6.jpg" alt>，则感知机的权重调整为：<br><img src="../../images/perceptron/7.jpg" alt><br>其中<img src="../../images/perceptron/8.jpg" alt>称为学习率（learning rate）。  </p>
-<h3 id="感知机解决非线性问题"><a href="#感知机解决非线性问题" class="headerlink" title="感知机解决非线性问题"></a>感知机解决非线性问题</h3><p>要解决非线性可分问题，需要考虑使用多层功能神经元。如下图则可用两层感知机解决问题。<br><img src="../../images/perceptron/9.jpg" alt><br>输出层与输入层之间的一层神经元，被称为隐含层（hidden layer），隐含层和输出层神经元都是拥有激活函数的功能神经元</p>
-<h2 id="多层前馈神经网络"><a href="#多层前馈神经网络" class="headerlink" title="多层前馈神经网络"></a>多层前馈神经网络</h2><p>常见的神经网络如下图所示（由两层或两层以上的感知机所组成）。<br><img src="../../images/perceptron/10.jpg" alt><br>每一层神经元与下一层神经元全互连，神经元之间不存在同层连接，也不存在跨层连接，这样的神经网络结构通常称为“多层前馈神经网络”（multi-layer feedforward neural networks），其中输入层神经元接收外界输入，隐层与输出层神经元对信号进行加工，最终结果由输出层神经元输出。<br>神经网络的学习过程，就是根据训练数据来调整神经元之间的连接权以及每个功能神经元的阈值，神经网络“学”到的东西，蕴含在连接权与阈值之中。<br><strong>注：“前馈”是指网络拓扑结构上不存在环或回路</strong>  </p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1]<a href="https://www.cnblogs.com/huangyc/p/9706575.html" target="_blank" rel="noopener">感知机原理（perceptron）</a><br>[2]周志华.机器学习.北京：清华大学出版社，2016年</p>
+        <h2 id="Multi-class-Classification"><a href="#Multi-class-Classification" class="headerlink" title="Multi-class Classification"></a>Multi-class Classification</h2><p>以下代码引用如下包：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> scipy.optimize <span class="keyword">as</span> op</span><br><span class="line"><span class="keyword">from</span> scipy.io <span class="keyword">import</span> loadmat</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure></p>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>该数据集是由5000个样本组成的手写数字组成的，并且保存为.mat的Matlab矩阵格式。首先我们需要对数据进行提取，采用scipy.io库中的loadmat函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io <span class="keyword">import</span> loadmat</span><br><span class="line">data_mat = loadmat(<span class="string">'./ex3data1.mat'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>查看其中的关键词：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(data_mat.keys())</span><br></pre></td></tr></table></figure></p>
+<p><code>dict_keys([&#39;__header__&#39;, &#39;__version__&#39;, &#39;__globals__&#39;, &#39;X&#39;, &#39;y&#39;])</code><br>我们选择提取X，y，并将其转化为数组并将y向量化。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X = np.array(pd.DataFrame(data_mat[<span class="string">'X'</span>]))</span><br><span class="line">y = np.array(pd.DataFrame(data_mat[<span class="string">'y'</span>]))</span><br><span class="line">y = y.flatten()</span><br></pre></td></tr></table></figure></p>
+<p>查看X，y的结构<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(X.shape, y.shape)</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>(5000, 400) (5000,)</code>   </p>
+<ul>
+<li>X：5000个样本，特征有400个，因为每张图片的大小为20*20的灰度图，共有400个像素值。  </li>
+<li>y：5000个样本，值由1-10组成，其中10代表0（因为Matlab中索引从1开始）</li>
+</ul>
+<h3 id="Visualizing-the-data"><a href="#Visualizing-the-data" class="headerlink" title="Visualizing the data"></a>Visualizing the data</h3><p>此处的灰度图片，就是由0-255的二维矩阵组成。我们首先随机提取100张图片，将其内容放在一个(20<em>10+pad</em>11,20<em>10+pad</em>11)的矩阵中（pad为边界），然后通过PIL的Image的fromarray函数将其转化为可输出的图片。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">displayData</span><span class="params">(X)</span>:</span></span><br><span class="line">    pad, row, col = <span class="number">2</span>, <span class="number">-1</span>, <span class="number">0</span></span><br><span class="line">    X_shuffle = np.copy(X)</span><br><span class="line">    np.random.shuffle(X_shuffle)</span><br><span class="line">    matrix = np.ones((<span class="number">20</span>*<span class="number">10</span>+pad*<span class="number">11</span>,<span class="number">20</span>*<span class="number">10</span>+pad*<span class="number">11</span>))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range (<span class="number">0</span>,<span class="number">100</span>):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">            row += <span class="number">1</span></span><br><span class="line">            col = <span class="number">0</span></span><br><span class="line">            matrix[row*<span class="number">20</span>+(row+<span class="number">1</span>)*pad:(row+<span class="number">1</span>)*<span class="number">20</span>+(row+<span class="number">1</span>)*pad, col*<span class="number">20</span>+(col+<span class="number">1</span>)*pad:(col+<span class="number">1</span>)*<span class="number">20</span>+(col+<span class="number">1</span>)*pad] \</span><br><span class="line">            = X_shuffle[i].reshape((<span class="number">20</span>, <span class="number">20</span>)).T</span><br><span class="line">            col += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            matrix[row*<span class="number">20</span>+(row+<span class="number">1</span>)*pad:(row+<span class="number">1</span>)*<span class="number">20</span>+(row+<span class="number">1</span>)*pad, col*<span class="number">20</span>+(col+<span class="number">1</span>)*pad:(col+<span class="number">1</span>)*<span class="number">20</span>+(col+<span class="number">1</span>)*pad] \</span><br><span class="line">            = X_shuffle[i].reshape((<span class="number">20</span>, <span class="number">20</span>)).T</span><br><span class="line">            col += <span class="number">1</span></span><br><span class="line">    matrix *= <span class="number">255</span></span><br><span class="line">    picture = Image.fromarray(matrix)</span><br><span class="line">    picture.show()</span><br><span class="line">    picture.close()</span><br></pre></td></tr></table></figure></p>
+<p>如下图所示：<br>&nbsp;<img src="../../images/ex_3/1.png" alt></p>
+<h3 id="Vectorizing-Logistic-Regression"><a href="#Vectorizing-Logistic-Regression" class="headerlink" title="Vectorizing Logistic Regression"></a>Vectorizing Logistic Regression</h3><h4 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h4><p>首先与之前相同，需对特征矩阵进行扩充一列全为1的向量，因为线性模型中含有偏置顶。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X = np.c_[np.ones((len(y), <span class="number">1</span>)), X]</span><br></pre></td></tr></table></figure></p>
+<h4 id="Sigmoid"><a href="#Sigmoid" class="headerlink" title="Sigmoid"></a>Sigmoid</h4><p>同Logistic Regression。<br>                                                            $g(z)=\frac{1}{1+e^{-z}}$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid</span><span class="params">(z)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.</span>/(<span class="number">1</span> + np.exp(-z))</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vectorizing-the-cost-function"><a href="#Vectorizing-the-cost-function" class="headerlink" title="Vectorizing the cost function"></a>Vectorizing the cost function</h4><p>此处与之前所做的Logistic Regression中的代价函数相同，不在赘述。(不过返回值少了个括号，导致我的准确率一直不对，检查了小半天才看出来，TAT)<br>                           $J(\theta)=\frac{1}{m}\displaystyle\sum^{m}_{i=1}{[-y^{(i)}log(h_\theta(x^{(i)}))-(1-y^{(i)}log(1-h_\theta(^{(i)}))]}+\frac{\lambda}{2m}\displaystyle\sum^{n}_{j=1}\theta^2_j$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cost</span><span class="params">(theta, X, y, l = <span class="number">1</span>)</span>:</span></span><br><span class="line">    h = sigmoid(np.dot(X, theta))</span><br><span class="line">    <span class="keyword">return</span>  (-np.dot(y, np.log(h)) - \</span><br><span class="line">    np.dot((<span class="number">1</span>-y), np.log(<span class="number">1</span>-h)))/ len(y) + \</span><br><span class="line">    l * theta[<span class="number">1</span>:].T.dot(theta[<span class="number">1</span>:]) / (<span class="number">2</span> * len(y))</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vectorizing-the-gradient"><a href="#Vectorizing-the-gradient" class="headerlink" title="Vectorizing the gradient"></a>Vectorizing the gradient</h4><p>梯度函数也与之前相同。<br>                                       $\frac{\partial{J(\theta)}}{\partial{\theta_j}}=\frac{1}{m}\displaystyle\sum^{m}_{i=1}(h_\theta(x^{(i)}-y^{(i)})x_j^{(i)}\qquad for\quad j=0$<br>                                        $\frac{\partial{J(\theta)}}{\partial{\theta_j}}=\frac{1}{m}\displaystyle\sum^{m}_{i=1}(h_\theta(x^{(i)}-y^{(i)})x_j^{(i)}++\frac{\lambda}{m}\theta_j\qquad for\quad j\geq1$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradient</span><span class="params">(theta, X, y, l = <span class="number">1</span>)</span>:</span></span><br><span class="line">    h = sigmoid(np.dot(X, theta))</span><br><span class="line">    theta1 = theta * l / len(y)</span><br><span class="line">    theta1[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">    grad = np.dot(X.T, h - y) / len(y) + theta1</span><br><span class="line">    <span class="keyword">return</span> grad.flatten()</span><br></pre></td></tr></table></figure></p>
+<h3 id="One-vs-all-Classification"><a href="#One-vs-all-Classification" class="headerlink" title="One-vs-all Classification"></a>One-vs-all Classification</h3><p>在多分类学习中，我们是基于一些基本策略，利用二分类学习器来解决多分类问题。<br>多分类的基本思路是“拆解法”，即将多分类任务拆为若干个二分类任务求解。先对问题进行拆分，然后为拆除的每个二分类任务训练一个分类器；在测试时，对这些分类器的预测结果进行集成以获得最终的分类结果。<br>最经典的拆分策略有三种：”一对一“（One vs. One），”一对其余“（One vs. Rest，亦称One vs. All），“多对多”（Many vs. Many）。<br>OvR（OvA）是每次将一个类的样例作为正例、所有其他类的样例作为反例来训练N个分类器。<br>（以上摘自周志华.《机器学习》）<br>此处我们选择OvA，所以我们需要训练10个分类器，每次把一类作为正例，即正确的数字（标为1），其余作为反例（标为0），将其进行保存。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">oneVsAll</span><span class="params">(X, y, num_labels)</span>:</span></span><br><span class="line">    all_theta = np.zeros((num_labels, X.shape[<span class="number">1</span>]))</span><br><span class="line">    <span class="keyword">for</span> K <span class="keyword">in</span> range(<span class="number">1</span>, num_labels + <span class="number">1</span>):</span><br><span class="line">        initial_theta = np.zeros(X.shape[<span class="number">1</span>],);</span><br><span class="line">        y_K = np.array([<span class="number">1</span> <span class="keyword">if</span> label == K <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> label <span class="keyword">in</span> y])</span><br><span class="line">        fmin = op.minimize(fun=cost, x0=initial_theta, </span><br><span class="line">            args=(X, y_K, <span class="number">1</span>), method=<span class="string">'TNC'</span>, jac=gradient)</span><br><span class="line">        all_theta[K - <span class="number">1</span>,:] = fmin.x</span><br><span class="line">    <span class="keyword">return</span> all_theta</span><br></pre></td></tr></table></figure></p>
+<p>注：关于for循环，我们采用1-10，因为此处以10代表0。  </p>
+<h4 id="One-vs-all-Prediction"><a href="#One-vs-all-Prediction" class="headerlink" title="One-vs-all Prediction"></a>One-vs-all Prediction</h4><p>将所得到的参数矩阵$\theta$与X做矩阵乘法，再用Sigmoid将每个分类的值转化为一个接近0或1的值，最后将10个分类器进行集成，返回每个样本中，值最大的索引，即所预测的数字。（此处+1是因为从零开始，而y是从1开始）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preictOneVsAll</span><span class="params">(all_theta, X)</span>:</span></span><br><span class="line">    h = sigmoid(X.dot(all_theta.T))</span><br><span class="line">    h_argmax = np.argmax(h, axis=<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> h_argmax + <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>最后计算其分类模型的准确率。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y_pred = preictOneVsAll(all_theta, X)</span><br><span class="line"></span><br><span class="line">correct = [<span class="number">1</span> <span class="keyword">if</span> a == b <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> (a, b) <span class="keyword">in</span> zip(y_pred, y)]</span><br><span class="line">accuracy = (sum(correct) / float(len(correct)))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'accuracy = &#123;0&#125;%'</span>.format(accuracy * <span class="number">100</span>))</span><br></pre></td></tr></table></figure></p>
+<p>注：<strong>zip(y_pred, y)是将其转化为一个元组列表，方便计算。</strong><br>准确率为：<code>accuracy = 94.46%</code>，与pdf上结果相近。  </p>
 
       
     </div>
@@ -523,7 +527,19 @@
 
     <div>
       
-        
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/Coursera_ML/ex-3/">ex-3</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年08月04日 - 14:08</p> <p><span>最后更新:</span>2019年08月04日 - 16:08</p> <p><span>原始链接:</span><a href="/Coursera_ML/ex-3/" title="ex-3">http://yoursite.com/Coursera_ML/ex-3/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/Coursera_ML/ex-3/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script> 
       
     </div>
     
@@ -545,7 +561,7 @@
           
             <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i>Machine Learning</a>
           
-            <a href="/tags/Theory/" rel="tag"><i class="fa fa-tag"></i>Theory</a>
+            <a href="/tags/Coursera-ML/" rel="tag"><i class="fa fa-tag"></i>Coursera_ML</a>
           
         </div>
       
@@ -558,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/machine learning/BackPropagation/" rel="next" title="BackPropagation">
-                <i class="fa fa-chevron-left"></i> BackPropagation
+              <a href="/Coursera_ML/ex-2/" rel="next" title="ex_2 Logistic Regression">
+                <i class="fa fa-chevron-left"></i> ex_2 Logistic Regression
               </a>
             
           </div>
@@ -567,10 +583,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/examples/手写数字分类/" rel="prev" title="手写数字分类">
-                手写数字分类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -776,7 +788,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#M-P神经元"><span class="nav-number">1.</span> <span class="nav-text">M-P神经元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感知机"><span class="nav-number">2.</span> <span class="nav-text">感知机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机原理"><span class="nav-number">2.1.</span> <span class="nav-text">感知机原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机结构"><span class="nav-number">2.2.</span> <span class="nav-text">感知机结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机学习过程"><span class="nav-number">2.3.</span> <span class="nav-text">感知机学习过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机解决非线性问题"><span class="nav-number">2.4.</span> <span class="nav-text">感知机解决非线性问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多层前馈神经网络"><span class="nav-number">3.</span> <span class="nav-text">多层前馈神经网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Multi-class-Classification"><span class="nav-number">1.</span> <span class="nav-text">Multi-class Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dataset"><span class="nav-number">1.1.</span> <span class="nav-text">Dataset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visualizing-the-data"><span class="nav-number">1.2.</span> <span class="nav-text">Visualizing the data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vectorizing-Logistic-Regression"><span class="nav-number">1.3.</span> <span class="nav-text">Vectorizing Logistic Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prepare"><span class="nav-number">1.3.1.</span> <span class="nav-text">Prepare</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sigmoid"><span class="nav-number">1.3.2.</span> <span class="nav-text">Sigmoid</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorizing-the-cost-function"><span class="nav-number">1.3.3.</span> <span class="nav-text">Vectorizing the cost function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorizing-the-gradient"><span class="nav-number">1.3.4.</span> <span class="nav-text">Vectorizing the gradient</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#One-vs-all-Classification"><span class="nav-number">1.4.</span> <span class="nav-text">One-vs-all Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#One-vs-all-Prediction"><span class="nav-number">1.4.1.</span> <span class="nav-text">One-vs-all Prediction</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1322,6 +1334,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
