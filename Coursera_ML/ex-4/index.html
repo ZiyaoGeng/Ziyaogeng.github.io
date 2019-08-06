@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.1.2">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Neural NetworksDataset and The initial value数据集依旧是手写数字。定义初始值并引入包：12345678from scipy.io import loadmatimport scipy.optimize as opimport numpy as npinput_layer_size = 400hidden_layer_size = 25num_labels">
+<meta name="keywords" content="Machine Learning,Coursera_ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ex_4 Neural Networks Learning">
+<meta property="og:url" content="http://yoursite.com/Coursera_ML/ex-4/index.html">
+<meta property="og:site_name" content="Record">
+<meta property="og:description" content="Neural NetworksDataset and The initial value数据集依旧是手写数字。定义初始值并引入包：12345678from scipy.io import loadmatimport scipy.optimize as opimport numpy as npinput_layer_size = 400hidden_layer_size = 25num_labels">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/ex_4/2.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_4/1.png">
+<meta property="og:image" content="http://yoursite.com/images/ex_4/3.png">
+<meta property="og:updated_time" content="2019-08-06T12:01:45.586Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ex_4 Neural Networks Learning">
+<meta name="twitter:description" content="Neural NetworksDataset and The initial value数据集依旧是手写数字。定义初始值并引入包：12345678from scipy.io import loadmatimport scipy.optimize as opimport numpy as npinput_layer_size = 400hidden_layer_size = 25num_labels">
+<meta name="twitter:image" content="http://yoursite.com/images/ex_4/2.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/Coursera_ML/ex-4/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>ex_4 Neural Networks Learning | Record</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <!--<div class="headband"></div>-->
+    <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Record</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">recorded, accumulate the forces of the summary.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Coursera_ML/ex-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="江火似流萤">
+      <meta itemprop="description" content="GZY的个人博客">
+      <meta itemprop="image" content="/images/bloglogo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Record">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ex_4 Neural Networks Learning
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-06 15:36:39 / Modified: 20:01:45" itemprop="dateCreated datePublished" datetime="2019-08-06T15:36:39+08:00">2019-08-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coursera-ML/" itemprop="url" rel="index"><span itemprop="name">Coursera_ML</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Neural-Networks"><a href="#Neural-Networks" class="headerlink" title="Neural Networks"></a>Neural Networks</h2><h3 id="Dataset-and-The-initial-value"><a href="#Dataset-and-The-initial-value" class="headerlink" title="Dataset and The initial value"></a>Dataset and The initial value</h3><p>数据集依旧是手写数字。<br>定义初始值并引入包：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io <span class="keyword">import</span> loadmat</span><br><span class="line"><span class="keyword">import</span> scipy.optimize <span class="keyword">as</span> op</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">input_layer_size = <span class="number">400</span></span><br><span class="line">hidden_layer_size = <span class="number">25</span></span><br><span class="line">num_labels = <span class="number">10</span></span><br><span class="line">learning_rate = <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>读取数据的方法同ex-3。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data_mat1 = loadmat(<span class="string">'ex4data1.mat'</span>)</span><br><span class="line"></span><br><span class="line">X = np.array(data_mat1[<span class="string">'X'</span>])</span><br><span class="line">y = np.array(data_mat1[<span class="string">'y'</span>])</span><br></pre></td></tr></table></figure></p>
+<h3 id="Visualizing-the-data"><a href="#Visualizing-the-data" class="headerlink" title="Visualizing the data"></a>Visualizing the data</h3><p>与ex-3不同，此处参考了github上的代码，发现更为合适。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_100_image</span><span class="params">(X)</span>:</span></span><br><span class="line">    size = int(np.sqrt(X.shape[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line">    sample_idx = np.random.choice(np.arange(X.shape[<span class="number">0</span>]), <span class="number">100</span>)</span><br><span class="line">    sample_images = X[sample_idx, :]</span><br><span class="line">    fig, ax_array = plt.subplots(nrows=<span class="number">10</span>, ncols=<span class="number">10</span>, sharey=<span class="literal">True</span>, sharex=<span class="literal">True</span>, figsize=(<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">            ax_array[r, c].matshow((sample_images[<span class="number">10</span> * r + c].reshape((size, size))).T,</span><br><span class="line">                                   cmap=plt.cm.binary)</span><br><span class="line">            plt.xticks(np.array([]))</span><br><span class="line">            plt.yticks(np.array([]))</span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;<img src="../../images/ex_4/2.png" alt></p>
+<h3 id="Feedforward"><a href="#Feedforward" class="headerlink" title="Feedforward"></a>Feedforward</h3><p>前向传播的作用就相当于前面Logistic回归和线性回归中的假设函数（Hypothesis），如下图所示。<br>&nbsp;<img src="../../images/ex_4/1.png" alt></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">feedForward</span><span class="params">(Theta1, Theta2, X)</span>:</span> <span class="comment">#(25, 401),(10, 26)</span></span><br><span class="line">    m = X.shape[<span class="number">0</span>]</span><br><span class="line">    a1 = np.c_[np.ones((m,)), X] <span class="comment">#(5000, 401)</span></span><br><span class="line">    z2 = np.dot(a1, Theta1.T) <span class="comment">#(5000, 25)</span></span><br><span class="line">    a2 = np.c_[np.ones((m,)), sigmoid(z2)] <span class="comment">#(5000, 26)</span></span><br><span class="line">    z3 = np.dot(a2, Theta2.T) <span class="comment">#(5000, 10)</span></span><br><span class="line">    a3 = sigmoid(z3) <span class="comment">#(5000, 10)</span></span><br><span class="line">    <span class="keyword">return</span>  a1, z2, a2, z3, a3</span><br></pre></td></tr></table></figure>
+<p>返回<code>a1, z2, a2, z3, a3</code>是为了获取反向传播算法需要用到的参数。  </p>
+<h3 id="Cost-function"><a href="#Cost-function" class="headerlink" title="Cost function"></a>Cost function</h3><p>The cost function for neural networks with regularization is given by<br>$J(\Theta)=\frac{1}{m}\displaystyle\sum^{m}_{i=1}\displaystyle\sum^{K}_{k=1}[-y^{(i)}_klog((h_\theta(x^{(i)}))_k)-(1-y^{(i)}_k)log(1-(h_\theta(x^{(i)}))_k)]+\frac{\lambda}{2m}\displaystyle\sum^{L-1}_{l=1}\displaystyle\sum^{s_l}_{i=1}\displaystyle\sum^{l+1}_{j=1}(\Theta^{(l)}_{i,j})^2$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nncostFunction</span><span class="params">(nn_params, X, y, learning_rate)</span>:</span></span><br><span class="line">    Theta1 = np.reshape(nn_params[:(input_layer_size + <span class="number">1</span>)\</span><br><span class="line">        * hidden_layer_size], (hidden_layer_size, input_layer_size + <span class="number">1</span>))</span><br><span class="line">    Theta2 = np.reshape(nn_params[(input_layer_size + <span class="number">1</span>) * \</span><br><span class="line">        hidden_layer_size:], (num_labels, hidden_layer_size + <span class="number">1</span>))</span><br><span class="line">    J = <span class="number">0</span></span><br><span class="line">    m = X.shape[<span class="number">0</span>]</span><br><span class="line">    a1, z2, a2, z3, a3 = feedForward(Theta1, Theta2, X)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        y_i = np.array([<span class="number">1</span> <span class="keyword">if</span> label == y[i] <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> label <span class="keyword">in</span> range(<span class="number">11</span>)])</span><br><span class="line">        y_i = y_i[<span class="number">1</span>:] <span class="comment">#(10, )</span></span><br><span class="line">        J += np.dot(-y_i, np.log(a3[i,:])) - np.dot((<span class="number">1</span> - y_i), </span><br><span class="line">            np.log(<span class="number">1</span> - a3[i,:]))</span><br><span class="line">    J /= m</span><br><span class="line">    theta = (np.sum(Theta1[:,<span class="number">1</span>:] * Theta1[:,<span class="number">1</span>:]) + np.sum(Theta2[:,<span class="number">1</span>:] * \</span><br><span class="line">        Theta2[:,<span class="number">1</span>:])) * learning_rate / (<span class="number">2</span> * m)</span><br><span class="line">    <span class="keyword">return</span> J + theta</span><br></pre></td></tr></table></figure>
+<h2 id="Backpropagation"><a href="#Backpropagation" class="headerlink" title="Backpropagation"></a>Backpropagation</h2><h3 id="Sigmoid-gradient"><a href="#Sigmoid-gradient" class="headerlink" title="Sigmoid gradient"></a>Sigmoid gradient</h3><p>The gradient for the sigmoid function can be computed as:<br>                                            $g^{‘}(z)=\frac{d}{dz}g(z)=g(z)(1-g(z))$<br>where<br>                                                $sigmoid(z)=g(z)=\frac{1}{1+e^{-z}}$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid</span><span class="params">(z)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.</span> / (<span class="number">1</span> + np.exp(-z))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoidGradient</span><span class="params">(z)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> sigmoid(z) * (<span class="number">1</span> - sigmoid(z))</span><br></pre></td></tr></table></figure></p>
+<h3 id="Random-initialization"><a href="#Random-initialization" class="headerlink" title="Random initialization"></a>Random initialization</h3><p>随机生成初始化参数向量（权重）。$\Theta^{(l)}$的范围为$[-\epsilon_{init},\epsilon_{init}]$,此处另$\epsilon_{init}=0.12$。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">randInitializeWeight</span><span class="params">(input_layer_size, hidden_layer_size, num_labels)</span>:</span></span><br><span class="line">    epsilon_init = <span class="number">0.12</span></span><br><span class="line">    W = np.random.uniform(<span class="number">0</span>, <span class="number">1</span>, size = (input_layer_size+<span class="number">1</span>) * \</span><br><span class="line">        hidden_layer_size +(hidden_layer_size + <span class="number">1</span>) * num_labels, )\</span><br><span class="line">         * <span class="number">2</span> * epsilon_init - epsilon_init</span><br><span class="line">    <span class="keyword">return</span> W</span><br></pre></td></tr></table></figure></p>
+<p><code>np.random.unifrom(0,1,size)</code>函数是随机生成一个取值为[0,1]的size数组。  </p>
+<h3 id="Backpropagation-1"><a href="#Backpropagation-1" class="headerlink" title="Backpropagation"></a>Backpropagation</h3><p>我们的最终目的是为了找到$\Theta$来$minJ(\Theta)$，因此我们需要去计算出代价函数$J(\Theta)$和偏导$\frac{\partial}{\partial\Theta^{(l)}_{i,j}}J(\Theta)$，反向传播算法就是为了计算出$\frac{\partial}{\partial\Theta^{(l)}_{i,j}}J(\Theta)$，功能同Logistic回归和线性回归的梯度函数（gradient）。<br>我们另$\delta^{(l)}{j}$为第l层的底j个节点的误差，层数为$L$。<br>$\delta^{(L)}=a^{(L)}-y$  </p>
+<p>$\delta^{(L-1)}=(\Theta^{(L-1)})^T\delta^{(L)}.*g^{‘}(z^{(L-1)})$  </p>
+<p>$\delta^{(L-2)}=(\Theta^{(L-2)})^T\delta^{(L-1)}.*g^{‘}(z^{(L-2)})$    </p>
+<p>……  </p>
+<p>$\delta^{(2)}=(\Theta^{(2)})^T\delta^{(3)}.*g^{‘}(z^{(2)})$   </p>
+<p><strong>注：此处.*为矩阵各个元素对应相乘，且$g^{‘}(z^{(L-1)})=a^{(L-1)}.*(1-a^{(L-1)})$，此处z应是添加了1</strong>   </p>
+<p>伪代码如下：<br>Training Set{$(x^{(1)},y^{(1)}),…,(x^{(m)},y^{(m)})$}<br>Set $\Delta^{(l)}_{i,j}=0$<br>For i=1 to m<br>    Set  $a^{(1)}=x^{(i)}$<br>    Perform forward propagation to compute $a^{(l)}$ for l=2,3,…,L<br>    Using $y^{(i)}$, compute $\delta^{(L)}-y^{(i)}$<br>    Compute$\delta^{(L-1)},\delta^{(L-2)},…,\delta^{(2)}$<br>    $\Delta^{(l)}_{ij}:=\Delta^{(l)}_{ij}+a^{l}_{j}\delta^{(l+1)}_{i}$<br>$D^{(l)}_{ij}:=\frac{1}{m}\Delta^{(l)}_{ij}+\lambda\Theta^{(l)}_{ij}$ if $j\neq0$<br>$D^{(l)}_{ij}:=\frac{1}{m}\Delta^{(l)}_{ij}$ if $j=0$<br>通过数学推导可得：$\frac{\partial}{\partial\Theta^{(l)}_{i,j}}J(\Theta)=D^{(l)}_{ij}$<br>注：此处y需要进行one_hot编码。  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backpropagation</span><span class="params">(nn_params, X, y, learning_rate)</span>:</span></span><br><span class="line">    Theta1 = np.reshape(nn_params[:(input_layer_size + <span class="number">1</span>)\</span><br><span class="line">        * hidden_layer_size], (hidden_layer_size, input_layer_size + <span class="number">1</span>))</span><br><span class="line">    Theta2 = np.reshape(nn_params[(input_layer_size + <span class="number">1</span>) * \</span><br><span class="line">        hidden_layer_size:], (num_labels, hidden_layer_size + <span class="number">1</span>))</span><br><span class="line">    m = X.shape[<span class="number">0</span>]</span><br><span class="line">    a1, z2, a2, z3, a3 = feedForward(Theta1, Theta2, X)</span><br><span class="line">    <span class="comment"># one_hot</span></span><br><span class="line">    one_hot_y = np.array([[<span class="number">1</span> <span class="keyword">if</span> y[i] == j <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">11</span>)]<span class="keyword">for</span> i <span class="keyword">in</span> range(len(y))])</span><br><span class="line">    one_hot_y = one_hot_y[:,<span class="number">1</span>:]</span><br><span class="line"></span><br><span class="line">    delta1 = np.zeros(Theta1.shape) <span class="comment"># (25, 401)</span></span><br><span class="line">    delta2 = np.zeros(Theta2.shape) <span class="comment"># (10, 26)</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(m):</span><br><span class="line">        a1_i = np.reshape(a1[i,:],(<span class="number">1</span>, len(a1[<span class="number">0</span>]))) <span class="comment">#(1, 401)</span></span><br><span class="line">        z2_i = np.reshape(z2[i,:],(<span class="number">1</span>, len(z2[<span class="number">0</span>]))) <span class="comment">#(1, 25)</span></span><br><span class="line">        a2_i = np.reshape(a2[i,:],(<span class="number">1</span>, len(a2[<span class="number">0</span>]))) <span class="comment">#(1, 26)</span></span><br><span class="line">        a3_i = np.reshape(a3[i,:],(<span class="number">1</span>, len(a3[<span class="number">0</span>]))) <span class="comment">#(1, 10)</span></span><br><span class="line">        y_i = one_hot_y[i, :]  </span><br><span class="line">        d3_i = a3_i - y_i        <span class="comment">#(1, 10)</span></span><br><span class="line">        z2_i = np.c_[np.ones((<span class="number">1</span>,)), z2_i]</span><br><span class="line">        d2_i = np.dot(Theta2.T, d3_i.T).T * sigmoidGradient(z2_i) <span class="comment">#(1, 26)</span></span><br><span class="line"></span><br><span class="line">        delta1 = delta1 + np.dot(d2_i[:,<span class="number">1</span>:].T,a1_i)</span><br><span class="line">        delta2 = delta2 + np.dot(d3_i.T, a2_i)</span><br><span class="line">    </span><br><span class="line">    delta1 /= m</span><br><span class="line">    delta2 /= m</span><br><span class="line">    delta1[:,<span class="number">1</span>:] = delta1[:,<span class="number">1</span>:] + (Theta1[:,<span class="number">1</span>:] * learning_rate) / m</span><br><span class="line">    delta2[:,<span class="number">1</span>:] = delta2[:,<span class="number">1</span>:] + (Theta2[:,<span class="number">1</span>:] * learning_rate) / m</span><br><span class="line">    grad = np.concatenate((delta1.flatten(), delta2.flatten()))</span><br><span class="line">    <span class="keyword">return</span> grad</span><br></pre></td></tr></table></figure>
+<h3 id="Learning-parameters-using-minimize"><a href="#Learning-parameters-using-minimize" class="headerlink" title="Learning parameters using minimize"></a>Learning parameters using minimize</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nn_train</span><span class="params">(X,y)</span>:</span></span><br><span class="line">    fmin = op.minimize(fun=nncostFunction, x0=nn_params, </span><br><span class="line">        args=(X, y, learning_rate), method=<span class="string">'TNC'</span>, jac=backpropagation, </span><br><span class="line">        options=&#123;<span class="string">'maxiter'</span>: <span class="number">250</span>&#125;)   </span><br><span class="line">    <span class="keyword">return</span> fmin</span><br><span class="line"></span><br><span class="line">nn_params = randInitializeWeight(input_layer_size, hidden_layer_size, num_labels)</span><br><span class="line">print(nn_train(X, y))</span><br></pre></td></tr></table></figure>
+<p>设置最大的迭代次数为250次。<br>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    fun: 0.33431033764051943</span><br><span class="line">    jac: array([ 1.80122733e-04,  2.91512941e-07, -2.41860480e-07, ...,</span><br><span class="line">       7.21952980e-05,  4.92183397e-06, -3.14373459e-05])</span><br><span class="line">message: &apos;Max. number of function evaluations reached&apos;</span><br><span class="line">   nfev: 250</span><br><span class="line">    nit: 20</span><br><span class="line"> status: 3</span><br><span class="line">success: False</span><br><span class="line">      x: array([-1.10232549e+00,  1.45756471e-03, -1.20930240e-03, ...,</span><br><span class="line">      -5.52497298e+00, -1.97210589e+00, -1.52716817e+00])</span><br></pre></td></tr></table></figure></p>
+<p>代价函数为：0.33，这是一个不错的指标。  </p>
+<h3 id="Predict"><a href="#Predict" class="headerlink" title="Predict"></a>Predict</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_accuracy</span><span class="params">(y_pred, y)</span>:</span></span><br><span class="line">    correct = [<span class="number">1</span> <span class="keyword">if</span> a == b <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">for</span> (a, b) <span class="keyword">in</span> zip(y_pred, y)]</span><br><span class="line">    accuracy = (sum(correct) / float(len(correct)))</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'accuracy = &#123;0&#125;%'</span>.format(accuracy * <span class="number">100</span>))</span><br><span class="line"></span><br><span class="line">theta1 = np.reshape(fmin.x[:(input_layer_size + <span class="number">1</span>)\</span><br><span class="line">    * hidden_layer_size], (hidden_layer_size, input_layer_size + <span class="number">1</span>))</span><br><span class="line">theta2 = np.reshape(fmin.x[(input_layer_size + <span class="number">1</span>) * \</span><br><span class="line">    hidden_layer_size:], (num_labels, hidden_layer_size + <span class="number">1</span>))</span><br><span class="line">a1, z2, a2, z3, a3 = feedForward(theta1, theta2, X)</span><br><span class="line">y_pred = np.argmax(a3, axis=<span class="number">1</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">get_accuracy(y_pred, y)</span><br></pre></td></tr></table></figure>
+<p>最后预测的准确率为：<code>accuracy = 99.3%</code>。<br>使用sklearn包来进行评价。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</span><br><span class="line">print(classification_report(y, y_pred))</span><br></pre></td></tr></table></figure></p>
+<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">              precision    recall  f1-score   support</span><br><span class="line"></span><br><span class="line">           1       0.99      0.99      0.99       500</span><br><span class="line">           2       0.99      0.99      0.99       500</span><br><span class="line">           3       0.99      0.98      0.99       500</span><br><span class="line">           4       0.99      0.99      0.99       500</span><br><span class="line">           5       0.99      1.00      1.00       500</span><br><span class="line">           6       1.00      0.99      1.00       500</span><br><span class="line">           7       0.99      0.99      0.99       500</span><br><span class="line">           8       0.99      1.00      0.99       500</span><br><span class="line">           9       0.99      0.98      0.98       500</span><br><span class="line">          10       0.99      1.00      0.99       500</span><br><span class="line"></span><br><span class="line">    accuracy                           0.99      5000</span><br><span class="line">   macro avg       0.99      0.99      0.99      5000</span><br><span class="line">weighted avg       0.99      0.99      0.99      5000</span><br></pre></td></tr></table></figure></p>
+<p>故已经成功实现基于反向传播的神经网络算法，用于实现手写数字识别。  </p>
+<h2 id="Visualizing-the-hidden-layer"><a href="#Visualizing-the-hidden-layer" class="headerlink" title="Visualizing the hidden layer"></a>Visualizing the hidden layer</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_hidden_layer</span><span class="params">(theta)</span>:</span></span><br><span class="line">    Theta1 = np.reshape(nn_params[:(input_layer_size + <span class="number">1</span>)\</span><br><span class="line">        * hidden_layer_size], (hidden_layer_size, input_layer_size + <span class="number">1</span>))</span><br><span class="line">    hidden_layer = Theta1[:, <span class="number">1</span>:] </span><br><span class="line"></span><br><span class="line">    fig, ax_array = plt.subplots(nrows=<span class="number">5</span>, ncols=<span class="number">5</span>, sharey=<span class="literal">True</span>, sharex=<span class="literal">True</span>, figsize=(<span class="number">5</span>, <span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">            ax_array[r, c].matshow(hidden_layer[<span class="number">5</span> * r + c].reshape((<span class="number">20</span>, <span class="number">20</span>)),</span><br><span class="line">                                   cmap=plt.cm.binary)</span><br><span class="line">            plt.xticks(np.array([]))</span><br><span class="line">            plt.yticks(np.array([]))</span><br><span class="line"></span><br><span class="line">plot_hidden_layer(fmin.x)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>&nbsp;<img src="../../images/ex_4/3.png" alt></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/Coursera_ML/ex-4/">ex_4 Neural Networks Learning</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年08月06日 - 15:08</p> <p><span>最后更新:</span>2019年08月06日 - 20:08</p> <p><span>原始链接:</span><a href="/Coursera_ML/ex-4/" title="ex_4 Neural Networks Learning">http://yoursite.com/Coursera_ML/ex-4/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/Coursera_ML/ex-4/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script> 
+      
+    </div>
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i>Machine Learning</a>
+          
+            <a href="/tags/Coursera-ML/" rel="tag"><i class="fa fa-tag"></i>Coursera_ML</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Coursera_ML/ex-3/" rel="next" title="ex_3 Multi-class Classification and Neural Networks">
+                <i class="fa fa-chevron-left"></i> ex_3 Multi-class Classification and Neural Networks
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+<div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+    
+ </div>
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/bloglogo.png" alt="江火似流萤">
+            
+              <p class="site-author-name" itemprop="name">江火似流萤</p>
+              <div class="site-description motion-element" itemprop="description">GZY的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/BlackSpaceGZY" title="GitHub &rarr; https://github.com/BlackSpaceGZY" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/5890853689" title="Weibo &rarr; https://weibo.com/5890853689" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neural-Networks"><span class="nav-number">1.</span> <span class="nav-text">Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dataset-and-The-initial-value"><span class="nav-number">1.1.</span> <span class="nav-text">Dataset and The initial value</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visualizing-the-data"><span class="nav-number">1.2.</span> <span class="nav-text">Visualizing the data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Feedforward"><span class="nav-number">1.3.</span> <span class="nav-text">Feedforward</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-function"><span class="nav-number">1.4.</span> <span class="nav-text">Cost function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Backpropagation"><span class="nav-number">2.</span> <span class="nav-text">Backpropagation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sigmoid-gradient"><span class="nav-number">2.1.</span> <span class="nav-text">Sigmoid gradient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random-initialization"><span class="nav-number">2.2.</span> <span class="nav-text">Random initialization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Backpropagation-1"><span class="nav-number">2.3.</span> <span class="nav-text">Backpropagation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-parameters-using-minimize"><span class="nav-number">2.4.</span> <span class="nav-text">Learning parameters using minimize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Predict"><span class="nav-number">2.5.</span> <span class="nav-text">Predict</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visualizing-the-hidden-layer"><span class="nav-number">3.</span> <span class="nav-text">Visualizing the hidden layer</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">江火似流萤</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Symbols count total"></span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="Reading time total"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="Total Views">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+      <div>
+        <div class="addthis_inline_share_toolbox">
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d130bae850dceb2" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+      
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+</body>
+</html>
