@@ -101,18 +101,20 @@
 
 
 
-  <meta name="description" content="机器学习定义【by Tom Mitchell】A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experi">
-<meta name="keywords" content="Machine Learning,Note">
+  <meta name="description" content="Recommender Systems主要是实现协同过滤算法对电影评分进行应用。   Movie ratings dataset Y：Y是1682*943构成的矩阵，$Y_{i,j}$代表j用户对i电影的评分（0-5）。 R：R是1682*943构成的0、1矩阵，$R_{i,j}$代表j用户是否对i电影进行评分。    Collaborative filtering learning algori">
+<meta name="keywords" content="Machine Learning,Coursera_ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine_Learning_week1">
-<meta property="og:url" content="http://yoursite.com/machine learning/week1/index.html">
+<meta property="og:title" content="ex-8 Anomaly Detection and Recommender Systems">
+<meta property="og:url" content="http://yoursite.com/Coursera_ML/ex-8/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="机器学习定义【by Tom Mitchell】A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experi">
+<meta property="og:description" content="Recommender Systems主要是实现协同过滤算法对电影评分进行应用。   Movie ratings dataset Y：Y是1682*943构成的矩阵，$Y_{i,j}$代表j用户对i电影的评分（0-5）。 R：R是1682*943构成的0、1矩阵，$R_{i,j}$代表j用户是否对i电影进行评分。    Collaborative filtering learning algori">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-30T01:45:14.129Z">
+<meta property="og:image" content="http://yoursite.com/images/ex_8/2.png">
+<meta property="og:updated_time" content="2019-08-19T08:22:19.729Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine_Learning_week1">
-<meta name="twitter:description" content="机器学习定义【by Tom Mitchell】A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experi">
+<meta name="twitter:title" content="ex-8 Anomaly Detection and Recommender Systems">
+<meta name="twitter:description" content="Recommender Systems主要是实现协同过滤算法对电影评分进行应用。   Movie ratings dataset Y：Y是1682*943构成的矩阵，$Y_{i,j}$代表j用户对i电影的评分（0-5）。 R：R是1682*943构成的0、1矩阵，$R_{i,j}$代表j用户是否对i电影进行评分。    Collaborative filtering learning algori">
+<meta name="twitter:image" content="http://yoursite.com/images/ex_8/2.png">
 
 
 
@@ -120,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/machine learning/week1/">
+  <link rel="canonical" href="http://yoursite.com/Coursera_ML/ex-8/">
 
 
 
@@ -130,7 +132,7 @@
   };
 </script>
 
-  <title>Machine_Learning_week1 | Record</title>
+  <title>ex-8 Anomaly Detection and Recommender Systems | Record</title>
   
 
 
@@ -357,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/machine learning/week1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Coursera_ML/ex-8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="江火似流萤">
@@ -374,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Machine_Learning_week1
+          <h1 class="post-title" itemprop="name headline">ex-8 Anomaly Detection and Recommender Systems
 
               
             
@@ -400,24 +402,12 @@
                 
               
 
-              <time title="Created: 2019-07-28 15:16:57" itemprop="dateCreated datePublished" datetime="2019-07-28T15:16:57+08:00">2019-07-28</time>
+              <time title="Created: 2019-08-19 14:58:52 / Modified: 16:22:19" itemprop="dateCreated datePublished" datetime="2019-08-19T14:58:52+08:00">2019-08-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-07-30 09:45:14" itemprop="dateModified" datetime="2019-07-30T09:45:14+08:00">2019-07-30</time>
               
             
           </span>
@@ -434,7 +424,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coursera-ML/" itemprop="url" rel="index"><span itemprop="name">Coursera_ML</span></a></span>
 
                 
                 
@@ -504,10 +494,36 @@
       
 
       
-        <h2 id="机器学习定义【by-Tom-Mitchell】"><a href="#机器学习定义【by-Tom-Mitchell】" class="headerlink" title="机器学习定义【by Tom Mitchell】"></a>机器学习定义【by Tom Mitchell】</h2><p>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.”<br>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E后，经过P评判，程序在处理T时的性能有所提升。我认为经验E就是程序上万次的自我练习的经验而任务T就是下棋。性能度量值P呢，就是它在与一 些新的对手比赛时，赢得比赛的概率。  </p>
-<h2 id="监督学习与无监督学习"><a href="#监督学习与无监督学习" class="headerlink" title="监督学习与无监督学习"></a>监督学习与无监督学习</h2><h3 id="监督学习（supervised-learning）"><a href="#监督学习（supervised-learning）" class="headerlink" title="监督学习（supervised learning）"></a>监督学习（supervised learning）</h3><p>监督学习指的就是我们给学习算法一个数据集。这个数据集由“正确答案”组成。在房价的例子中，给出一系列房子的数据，我们给定数据集中每个样本的正确价格，即它们实际的售价然后运用学习算法，算出更多的正确答案。<br>监督学习的代表是<strong>分类（classification）</strong>与<strong>回归（regression）</strong>  </p>
-<h3 id="无监督学习（unsupervised-learning）"><a href="#无监督学习（unsupervised-learning）" class="headerlink" title="无监督学习（unsupervised learning）"></a>无监督学习（unsupervised learning）</h3><p>输入数据没有被标记，也没有确定的结果。样本数据类别未知，需要根据样本间的相似性对样本集进行分类试图使类内差距最小化，类间差距最大化。通俗点将就是实际应用中，不少情况下无法预先知道样本的标签，也就是说没有训练样本对应的类别，因而只能从原先没有样本标签的样本集开始学习分类器设计。非监督学习目标不是告诉计算机怎么做，而是让它（计算机）自己去学习怎样做事情。<br>无监督学习的代表是<strong>聚类（clustering）</strong>  </p>
-<h2 id="线性回归（Linear-Regression）"><a href="#线性回归（Linear-Regression）" class="headerlink" title="线性回归（Linear Regression）"></a>线性回归（Linear Regression）</h2>
+        <h2 id="Recommender-Systems"><a href="#Recommender-Systems" class="headerlink" title="Recommender Systems"></a>Recommender Systems</h2><p>主要是实现协同过滤算法对电影评分进行应用。  </p>
+<h3 id="Movie-ratings-dataset"><a href="#Movie-ratings-dataset" class="headerlink" title="Movie ratings dataset"></a>Movie ratings dataset</h3><ul>
+<li>Y：Y是1682*943构成的矩阵，$Y_{i,j}$代表j用户对i电影的评分（0-5）。</li>
+<li>R：R是1682*943构成的0、1矩阵，$R_{i,j}$代表j用户是否对i电影进行评分。  </li>
+</ul>
+<h3 id="Collaborative-filtering-learning-algorithm"><a href="#Collaborative-filtering-learning-algorithm" class="headerlink" title="Collaborative filtering learning algorithm"></a>Collaborative filtering learning algorithm</h3><p>协同过滤算法可以同时学习用户的参数和电影的特征。<br>为了方便后续训练(x0只接受向量化参数），我们需要对两者进行合并和拆解。<br>拆解：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deserialize</span><span class="params">(parm, n_users, n_movies, n_features)</span>:</span></span><br><span class="line">    Theta = np.reshape(parm[:n_users * n_features], (n_users, n_features))</span><br><span class="line">    X = np.reshape(parm[n_users * n_features:], (n_movies, n_features))</span><br><span class="line">    <span class="keyword">return</span> Theta, X</span><br></pre></td></tr></table></figure></p>
+<p>合并：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parm = np.concatenate((Theta.ravel(), X.ravel()))</span><br></pre></td></tr></table></figure></p>
+<h4 id="Collaborative-filtering-cost-function"><a href="#Collaborative-filtering-cost-function" class="headerlink" title="Collaborative filtering cost function"></a>Collaborative filtering cost function</h4><p>协同过滤算法的代价函数被定义为：  </p>
+<script type="math/tex; mode=display">J(x^{(1)},...,x^{(n_m)},\theta^{(1)},...,\theta^{(n_u)})=\frac{1}{2}\sum_{(i,j):r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}(x_k^{(i)})^2+\frac{\lambda}{2}\sum_{j=1}^{n_u}\sum_{k=1}^{n}(\theta_k^{(j)})^2</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">regularizer_cost</span><span class="params">(parm, Y, R, n_users, n_movies, n_features, l)</span>:</span></span><br><span class="line">    Theta, X = deserialize(parm, n_users, n_movies, n_features)</span><br><span class="line">    h = X @ Theta.T <span class="comment">#(1682, 943)</span></span><br><span class="line">    cost = np.sum(np.power(np.multiply(h - Y, R), <span class="number">2</span>)) / <span class="number">2</span> + \</span><br><span class="line">    (l / <span class="number">2</span>) * np.sum(parm ** <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> cost</span><br></pre></td></tr></table></figure>
+<p>注：看了作业的介绍说用循环来实现对已评价的h-y进行运算，但结果就是很慢（python能不用for循环就不用），看了大佬的代码后，发现可以用矩阵对应元素相乘的方法解决这个问题（没想到）。  </p>
+<h4 id="Collaborative-filtering-gradient"><a href="#Collaborative-filtering-gradient" class="headerlink" title="Collaborative filtering gradient"></a>Collaborative filtering gradient</h4><p>协同过滤算法的梯度函数为：<br>$\frac{\partial{J}}{\partial{x_k^{(i)}}}=\sum_{j:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\theta_k^{j}+\lambda x_k^{(i)}$<br>$\frac{\partial{J}}{\partial{\theta_k^{(i)}}}=\sum_{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}x_k^{(i)}+\lambda \theta_k^{(j)}$<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">regularizer_gradient</span><span class="params">(parm, Y, R, n_users, n_movies, n_features, l)</span>:</span></span><br><span class="line">    Theta, X = deserialize(parm, n_users, n_movies, n_features)</span><br><span class="line">    X_grad = np.zeros(X.shape)</span><br><span class="line">    Theta_grad = np.zeros(Theta.shape)</span><br><span class="line">    h = X @ Theta.T <span class="comment">#(1682, 943)</span></span><br><span class="line">    X_grad = np.multiply(h - Y, R) @ Theta</span><br><span class="line">    X_grad += l * X</span><br><span class="line">    Theta_grad = np.multiply(h - Y, R).T @ X</span><br><span class="line">    Theta_grad += l * Theta</span><br><span class="line">    parm = np.concatenate((Theta_grad.ravel(), X_grad.ravel()))</span><br><span class="line">    <span class="keyword">return</span> parm</span><br></pre></td></tr></table></figure></p>
+<p>注：大佬在此处是最后加上愿parm*l，不过我在此处为了还原公式，分开进行计算。  </p>
+<h3 id="Learning-movie-recommendations"><a href="#Learning-movie-recommendations" class="headerlink" title="Learning movie recommendations"></a>Learning movie recommendations</h3><h4 id="Movie-list"><a href="#Movie-list" class="headerlink" title="Movie list"></a>Movie list</h4><p>首先，我们需要得到整个电影列表。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">movie_list</span><span class="params">()</span>:</span></span><br><span class="line">    movie_list = []</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'movie_ids.txt'</span>,encoding=<span class="string">'latin-1'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">            line = line[line.find(<span class="string">' '</span>) + <span class="number">1</span>:<span class="number">-1</span>]</span><br><span class="line">            movie_list.append(line)</span><br><span class="line">    movie_list = np.array(movie_list)</span><br><span class="line">    <span class="keyword">return</span> movie_list</span><br></pre></td></tr></table></figure></p>
+<p>注：找到第一个空的索引，对电影名进行提取。  </p>
+<h4 id="Prepare-data"><a href="#Prepare-data" class="headerlink" title="Prepare data"></a>Prepare data</h4><p>首先当然是对所需的数据进行读入，然后对Y、R增加一列，当然这不是偏置项，这是你个人对每一部电影的评价分数，当然如果只是创建一个全0向量，就是没有对任意一部进行评价。（推荐系统的目的当然是通过训练的模型，再结合你自己的实际评分，来预测你对其他电影的评分，进而向你推荐你喜欢的电影）。最后对X、Theta随机取初始值（标准化）。<br>此处我们选择特征为50，正则化系数为10（先如此选择）。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = loadmat(<span class="string">'ex8_movies.mat'</span>)</span><br><span class="line">Y = data[<span class="string">'Y'</span>] <span class="comment">#(1682, 943)  </span></span><br><span class="line">R = data[<span class="string">'R'</span>] <span class="comment">#(1682, 943)</span></span><br><span class="line">ratings = np.zeros(<span class="number">1682</span>)</span><br><span class="line">Y = np.c_[ratings, Y]</span><br><span class="line">R = np.c_[ratings != <span class="number">0</span>, R]</span><br><span class="line">X = np.random.standard_normal((n_movies, n_features)) <span class="comment">#(1682, 10)</span></span><br><span class="line">Theta = np.random.standard_normal((n_users, n_features)) <span class="comment">#(943, 10)</span></span><br><span class="line">n_movies, n_users = Y.shape</span><br><span class="line">n_features = <span class="number">50</span></span><br><span class="line">l = <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="Mean-Normalization"><a href="#Mean-Normalization" class="headerlink" title="Mean Normalization"></a>Mean Normalization</h4><p>均值归一化的作用是，如果用户未对任意一部电影进行评分，可以让每部电影的平均分为该用户的评分。<br>首先进行均值归一化处理，对每一个用户对某一部电影的评分减去所有用户对该电影评分的平均值：<br>&nbsp;<img src="../../images/ex_8/2.png" alt><br>如果我们要用新训练出的算法来预测评分，则需要将平均值重新加回去。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mean_norm</span><span class="params">(Y)</span>:</span></span><br><span class="line">    Y = Y.astype(<span class="string">'float'</span>)</span><br><span class="line">    <span class="comment">#mean = np.mean(Y,axis = 1)</span></span><br><span class="line">    <span class="comment">#mean_matrix = np.reshape(np.repeat(mean, Y.shape[1]),(Y.shape[0], Y.shape[1]))</span></span><br><span class="line">    <span class="comment">#Y -= mean_matrix</span></span><br><span class="line">    <span class="comment">#return Y, mean</span></span><br><span class="line">    Y_norm = Y - Y.mean()</span><br><span class="line">    <span class="keyword">return</span> Y_norm, Y.mean()</span><br><span class="line"></span><br><span class="line">Y, mean = mean_norm(Y)</span><br></pre></td></tr></table></figure></p>
+<p>注：此处大佬的意思是对全部取平均分，每个评分再去减去它，与课上讲的不符啊。（另一部分代码则是还原上述的均值归一化处理）。  </p>
+<h4 id="Train"><a href="#Train" class="headerlink" title="Train"></a>Train</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">(parm, Y, R, n_users, n_movies, n_features, l)</span>:</span></span><br><span class="line">    fmin = op.minimize(fun = regularizer_cost,</span><br><span class="line">        x0 = parm, </span><br><span class="line">        args=(Y, R, n_users, n_movies, n_features, l), </span><br><span class="line">        method = <span class="string">'TNC'</span>,</span><br><span class="line">        jac = regularizer_gradient)</span><br><span class="line">    <span class="keyword">return</span> fmin</span><br><span class="line"></span><br><span class="line">parm = np.concatenate((Theta.ravel(), X.ravel()))</span><br><span class="line">fmin = train(parm, Y, R, n_users, n_movies, n_features, l)</span><br></pre></td></tr></table></figure>
+<h4 id="Recommendations"><a href="#Recommendations" class="headerlink" title="Recommendations"></a>Recommendations</h4><p>按照作业的要求，我们是依据自己对所有电影的评分进行推荐系统认为我最喜欢的前十部电影。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Theta, X = deserialize(fmin.x, n_users, n_movies, n_features)</span><br><span class="line"></span><br><span class="line">pred_y = np.dot(X, Theta.T)</span><br><span class="line">my_pred = pred_y[:,<span class="number">0</span>] + mean</span><br><span class="line"></span><br><span class="line">idx = np.argsort(my_pred)[::<span class="number">-1</span>]  <span class="comment"># Descending order</span></span><br><span class="line">print(my_pred[idx][:<span class="number">10</span>])</span><br><span class="line">movie_list = movie_list()</span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> movie_list[idx][:<span class="number">10</span>]:</span><br><span class="line">    print(m)</span><br></pre></td></tr></table></figure></p>
+<p>当评分如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ratings[0] = 4</span><br><span class="line">ratings[6] = 3</span><br><span class="line">ratings[11] = 5</span><br><span class="line">ratings[53] = 4</span><br><span class="line">ratings[63] = 5</span><br><span class="line">ratings[65] = 3</span><br><span class="line">ratings[68] = 5</span><br><span class="line">ratings[97] = 2</span><br><span class="line">ratings[182] = 4</span><br><span class="line">ratings[225] = 5</span><br><span class="line">ratings[354] = 5</span><br></pre></td></tr></table></figure></p>
+<p>结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[4.12536086 4.04411832 3.99323928 3.91902832 3.81689567 3.81556045</span><br><span class="line"> 3.76602196 3.76322213 3.75903971 3.75078448]</span><br><span class="line">Titanic (1997)</span><br><span class="line">Star Wars (1977)</span><br><span class="line">Shawshank Redemption, The (1994)</span><br><span class="line">Forrest Gump (1994)</span><br><span class="line">Raiders of the Lost Ark (1981)</span><br><span class="line">Braveheart (1995)</span><br><span class="line">Return of the Jedi (1983)</span><br><span class="line">Usual Suspects, The (1995)</span><br><span class="line">Godfather, The (1972)</span><br><span class="line">Schindler&apos;s List (1993)</span><br></pre></td></tr></table></figure></p>
+<p>当未对任意一部电影进行评分，推荐结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[0.2223135  0.22231341 0.22231338 0.22231337 0.22231311 0.22231304</span><br><span class="line"> 0.22231303 0.222313   0.222313   0.22231298]</span><br><span class="line">Liar Liar (1997)</span><br><span class="line">Titanic (1997)</span><br><span class="line">Scream (1996)</span><br><span class="line">George of the Jungle (1997)</span><br><span class="line">Chasing Amy (1997)</span><br><span class="line">Good Will Hunting (1997)</span><br><span class="line">Fly Away Home (1996)</span><br><span class="line">Con Air (1997)</span><br><span class="line">Starship Troopers (1997)</span><br><span class="line">Truth About Cats &amp; Dogs, The (1996)</span><br></pre></td></tr></table></figure></p>
+<p>推荐系统给出的评分是对每部电影的平均评分。   </p>
+<p>以上是使用大佬的均值归一化，下面使用课上讲的均值归一化进行处理（l=10），得到如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[4.46112006 4.27142573 4.21052584 4.14620017 4.01063254 3.91351821</span><br><span class="line"> 3.89114009 3.89076407 3.79091268 3.75694315]</span><br><span class="line">Star Wars (1977)</span><br><span class="line">Titanic (1997)</span><br><span class="line">Raiders of the Lost Ark (1981)</span><br><span class="line">Return of the Jedi (1983)</span><br><span class="line">Empire Strikes Back, The (1980)</span><br><span class="line">Braveheart (1995)</span><br><span class="line">Godfather, The (1972)</span><br><span class="line">Shawshank Redemption, The (1994)</span><br><span class="line">Terminator 2: Judgment Day (1991)</span><br><span class="line">Good Will Hunting (1997)</span><br></pre></td></tr></table></figure></p>
+<p>测试结果与第一条类似。  </p>
+<p>再测试若对第一位用户进行推荐（l=10）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[5.64227498 5.46177902 5.41247432 5.22233726 5.12619984 5.09219922</span><br><span class="line"> 5.07283847 5.05736107 5.03524349 4.9926624 ]</span><br><span class="line">Star Wars (1977)</span><br><span class="line">Wrong Trousers, The (1993)</span><br><span class="line">Close Shave, A (1995)</span><br><span class="line">Empire Strikes Back, The (1980)</span><br><span class="line">Secrets &amp; Lies (1996)</span><br><span class="line">Return of the Jedi (1983)</span><br><span class="line">Lawrence of Arabia (1962)</span><br><span class="line">Blade Runner (1982)</span><br><span class="line">Fargo (1996)</span><br><span class="line">Leaving Las Vegas (1995)</span><br></pre></td></tr></table></figure></p>
+<p>此处想不通为什么评分大于5？？？  </p>
+<p>再次测试对第二位用户进行推荐（l=10）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[4.62734085 4.62437752 4.50812562 4.4862737  4.44819498 4.42677091</span><br><span class="line"> 4.40712773 4.36196627 4.34529934 4.33993133]</span><br><span class="line">Titanic (1997)</span><br><span class="line">Fargo (1996)</span><br><span class="line">Schindler&apos;s List (1993)</span><br><span class="line">Good Will Hunting (1997)</span><br><span class="line">Star Wars (1977)</span><br><span class="line">Godfather, The (1972)</span><br><span class="line">Boot, Das (1981)</span><br><span class="line">L.A. Confidential (1997)</span><br><span class="line">Casablanca (1942)</span><br><span class="line">Close Shave, A (1995)</span><br></pre></td></tr></table></figure></p>
+<p>正确，所以第一位用户大于5的情况是什么情况？（代码查了一下午没发现任何问题）。</p>
+
       
     </div>
 
@@ -519,7 +535,7 @@
 
     <div>
       
-         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/machine learning/week1/">Machine_Learning_week1</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年07月28日 - 15:07</p> <p><span>最后更新:</span>2019年07月30日 - 09:07</p> <p><span>原始链接:</span><a href="/machine learning/week1/" title="Machine_Learning_week1">http://yoursite.com/machine learning/week1/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/machine learning/week1/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
+         <div class="my_post_copyright"> <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <p><span>本文标题:</span><a href="/Coursera_ML/ex-8/">ex-8 Anomaly Detection and Recommender Systems</a></p> <p><span>文章作者:</span><a href="/" title="访问 江火似流萤 的个人博客">江火似流萤</a></p> <p><span>发布时间:</span>2019年08月19日 - 14:08</p> <p><span>最后更新:</span>2019年08月19日 - 16:08</p> <p><span>原始链接:</span><a href="/Coursera_ML/ex-8/" title="ex-8 Anomaly Detection and Recommender Systems">http://yoursite.com/Coursera_ML/ex-8/</a> <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/Coursera_ML/ex-8/" aria-label="复制成功！"></i></span> </p> <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> </div> <script> 
     var clipboard = new Clipboard('.fa-clipboard');
     $(".fa-clipboard").click(function(){
       clipboard.on('success', function(){
@@ -553,7 +569,7 @@
           
             <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i>Machine Learning</a>
           
-            <a href="/tags/Note/" rel="tag"><i class="fa fa-tag"></i>Note</a>
+            <a href="/tags/Coursera-ML/" rel="tag"><i class="fa fa-tag"></i>Coursera_ML</a>
           
         </div>
       
@@ -566,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/概率论与数理统计/二元离散型随机变量/" rel="next" title="二元离散型随机变量">
-                <i class="fa fa-chevron-left"></i> 二元离散型随机变量
+              <a href="/Coursera_ML/ex-7/" rel="next" title="ex-7 K-means Clustering and Principal Component Analysis">
+                <i class="fa fa-chevron-left"></i> ex-7 K-means Clustering and Principal Component Analysis
               </a>
             
           </div>
@@ -575,10 +591,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Coursera_ML/ex-1/" rel="prev" title="ex_1">
-                ex_1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -784,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习定义【by-Tom-Mitchell】"><span class="nav-number">1.</span> <span class="nav-text">机器学习定义【by Tom Mitchell】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习与无监督学习"><span class="nav-number">2.</span> <span class="nav-text">监督学习与无监督学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#监督学习（supervised-learning）"><span class="nav-number">2.1.</span> <span class="nav-text">监督学习（supervised learning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无监督学习（unsupervised-learning）"><span class="nav-number">2.2.</span> <span class="nav-text">无监督学习（unsupervised learning）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归（Linear-Regression）"><span class="nav-number">3.</span> <span class="nav-text">线性回归（Linear Regression）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Recommender-Systems"><span class="nav-number">1.</span> <span class="nav-text">Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Movie-ratings-dataset"><span class="nav-number">1.1.</span> <span class="nav-text">Movie ratings dataset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collaborative-filtering-learning-algorithm"><span class="nav-number">1.2.</span> <span class="nav-text">Collaborative filtering learning algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collaborative-filtering-cost-function"><span class="nav-number">1.2.1.</span> <span class="nav-text">Collaborative filtering cost function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Collaborative-filtering-gradient"><span class="nav-number">1.2.2.</span> <span class="nav-text">Collaborative filtering gradient</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-movie-recommendations"><span class="nav-number">1.3.</span> <span class="nav-text">Learning movie recommendations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Movie-list"><span class="nav-number">1.3.1.</span> <span class="nav-text">Movie list</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prepare-data"><span class="nav-number">1.3.2.</span> <span class="nav-text">Prepare data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mean-Normalization"><span class="nav-number">1.3.3.</span> <span class="nav-text">Mean Normalization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Train"><span class="nav-number">1.3.4.</span> <span class="nav-text">Train</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Recommendations"><span class="nav-number">1.3.5.</span> <span class="nav-text">Recommendations</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1330,6 +1342,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
