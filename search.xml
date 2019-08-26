@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[“Z=X+Y_max_min]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2FZ-X-Y-max-min%2F</url>
+    <content type="text"><![CDATA[Z=X+Y定义&nbsp;&nbsp; 卷积公式&nbsp; 例&nbsp;&nbsp; 离散变量的独立和分布&nbsp; max(X,Y) min(X,Y)定义&nbsp;&nbsp; 例&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[随机变量的独立性]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E7%8B%AC%E7%AB%8B%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[随机变量的独立性定义&nbsp;&nbsp; 例&nbsp;&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[二元均匀分布、二元正态分布]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E4%BA%8C%E5%85%83%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83%E3%80%81%E4%BA%8C%E5%85%83%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%2F</url>
+    <content type="text"><![CDATA[二元均匀分布定义&nbsp; 例&nbsp;&nbsp; 二元正态分布&nbsp;&nbsp;&nbsp;&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[二元连续型随机变量]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E4%BA%8C%E5%85%83%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%2F</url>
     <content type="text"><![CDATA[联合概率密度函数定义&nbsp;&nbsp; 性质&nbsp;&nbsp; 例&nbsp;&nbsp; 边际概率密度定义&nbsp;&nbsp; 例&nbsp; 条件概率密度定义&nbsp;&nbsp; 例&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二元离散型与连续型变量分布比较&nbsp;]]></content>
