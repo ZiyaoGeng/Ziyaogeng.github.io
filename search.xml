@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数学期望]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%2F</url>
+    <content type="text"><![CDATA[随机变量的数学期望离散型&nbsp; 连续型&nbsp; 例&nbsp;&nbsp;&nbsp;&nbsp; 随机变量函数的数学期望离散型&nbsp; 连续型&nbsp; 例&nbsp;&nbsp; 二元离散型&nbsp; 二元连续型&nbsp; 例&nbsp;&nbsp; 数学期望的性质&nbsp;&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[“Z=X+Y_max_min]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2FZ-X-Y-max-min%2F</url>
     <content type="text"><![CDATA[Z=X+Y定义&nbsp;&nbsp; 卷积公式&nbsp; 例&nbsp;&nbsp; 离散变量的独立和分布&nbsp; max(X,Y) min(X,Y)定义&nbsp;&nbsp; 例&nbsp;]]></content>
