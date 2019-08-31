@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[方差_协方差_相关系数]]></title>
+    <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E6%96%B9%E5%B7%AE-%E5%8D%8F%E6%96%B9%E5%B7%AE-%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[方差定义&nbsp;&nbsp; 例&nbsp;&nbsp;&nbsp; 性质&nbsp;&nbsp; 例&nbsp;&nbsp;&nbsp; 协方差定义&nbsp;&nbsp;&nbsp; 性质&nbsp; 相关系数定义&nbsp; 性质&nbsp;&nbsp; 例&nbsp;]]></content>
+      <categories>
+        <category>概率论与数理统计</category>
+      </categories>
+      <tags>
+        <tag>概率论与数理统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数学期望]]></title>
     <url>%2F%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%2F%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B%2F</url>
     <content type="text"><![CDATA[随机变量的数学期望离散型&nbsp; 连续型&nbsp; 例&nbsp;&nbsp;&nbsp;&nbsp; 随机变量函数的数学期望离散型&nbsp; 连续型&nbsp; 例&nbsp;&nbsp; 二元离散型&nbsp; 二元连续型&nbsp; 例&nbsp;&nbsp; 数学期望的性质&nbsp;&nbsp;]]></content>
